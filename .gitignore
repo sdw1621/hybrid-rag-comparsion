@@ -10,3 +10,6 @@ chroma_db/
 dist/
 build/
 .pytest_cache/
+
+# Ignore nested repo used for comparison/demo
+hybrid-rag-comparsion/

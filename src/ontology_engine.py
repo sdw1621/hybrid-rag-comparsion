@@ -22,6 +22,9 @@ class OntologyEngine:
             import owlready2
             self.use_owlready = True
             self._build_ontology()
+            # Keep a rule-based copy of the same instances so constraint checks work
+            # regardless of whether Owlready2 is available.
+            self._load_rule_based()
         except ImportError:
             print("⚠️  owlready2 없음 → 규칙 기반 모드")
             self._load_rule_based()
