@@ -330,6 +330,48 @@ elif page == "📊 성능 비교":
     )
     st.plotly_chart(fig_perf, use_container_width=True)
 
+    # 평가 지표 설명
+    st.markdown("##### 📏 평가 지표 설명")
+    mc1, mc2, mc3 = st.columns(3)
+    with mc1:
+        st.markdown(
+            '<div style="background:rgba(55,138,221,0.12);border-radius:8px;padding:14px;border-left:4px solid #378ADD;margin-bottom:8px;">'
+            '<b style="color:#378ADD;">F1 Score</b><br>'
+            '<span style="font-size:13px;">Precision과 Recall의 조화 평균. '
+            '정답과 예측 간 토큰 단위 겹침을 측정하며, 부분 정답도 반영합니다.</span></div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            '<div style="background:rgba(212,83,126,0.12);border-radius:8px;padding:14px;border-left:4px solid #D4537E;">'
+            '<b style="color:#D4537E;">Precision</b><br>'
+            '<span style="font-size:13px;">예측 답변 중 정답에 포함된 토큰 비율. '
+            '높을수록 불필요한 정보 없이 정확한 답변을 의미합니다.</span></div>',
+            unsafe_allow_html=True,
+        )
+    with mc2:
+        st.markdown(
+            '<div style="background:rgba(216,90,48,0.12);border-radius:8px;padding:14px;border-left:4px solid #D85A30;margin-bottom:8px;">'
+            '<b style="color:#D85A30;">EM (Exact Match)</b><br>'
+            '<span style="font-size:13px;">예측 답변이 정답과 완전히 일치하는 비율. '
+            '가장 엄격한 평가 기준으로, 부분 정답은 0점 처리됩니다.</span></div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            '<div style="background:rgba(29,158,117,0.12);border-radius:8px;padding:14px;border-left:4px solid #1D9E75;">'
+            '<b style="color:#1D9E75;">Recall@3</b><br>'
+            '<span style="font-size:13px;">상위 3개 검색 결과 안에 정답 문서가 포함된 비율. '
+            '검색 단계의 품질을 평가합니다.</span></div>',
+            unsafe_allow_html=True,
+        )
+    with mc3:
+        st.markdown(
+            '<div style="background:rgba(186,117,23,0.12);border-radius:8px;padding:14px;border-left:4px solid #BA7517;">'
+            '<b style="color:#BA7517;">Faithfulness</b><br>'
+            '<span style="font-size:13px;">생성된 답변이 검색된 컨텍스트에 근거한 비율. '
+            '높을수록 환각(hallucination) 없이 신뢰할 수 있는 답변입니다.</span></div>',
+            unsafe_allow_html=True,
+        )
+
     st.markdown("---")
     st.subheader("Table 14 — 질의 유형별 EM 점수")
     st.dataframe(
