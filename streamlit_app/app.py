@@ -171,24 +171,46 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             "딥러닝 과목 담당 교수의 연구 분야는?",
             "AI융합연구소 참여 교수 목록은?",
         ]
+
+        # 직접 입력 텍스트가 바뀌면 selectbox를 "직접 입력"으로 리셋
+        if "manual_query" not in st.session_state:
+            st.session_state.manual_query = ""
+        if "prev_manual" not in st.session_state:
+            st.session_state.prev_manual = ""
+
         c1, c2 = st.columns([1, 1])
         with c1:
-            ex = st.selectbox("예시 질의", ["직접 입력"] + examples)
+            ex = st.selectbox("예시 질의", ["직접 입력"] + examples, key="example_select")
         with c2:
-            query = st.text_area(
+            is_manual = (ex == "직접 입력")
+            manual_input = st.text_area(
                 "또는 직접 질문을 작성해 보세요",
                 placeholder="예: 김철수 교수의 연구 분야는?",
                 height=100,
+                disabled=not is_manual,
+                key="manual_query",
             )
+
+        # 직접 입력에 텍스트가 새로 작성되면 selectbox를 자동 리셋
+        if manual_input and manual_input != st.session_state.prev_manual and ex != "직접 입력":
+            st.session_state.example_select = "직접 입력"
+            st.session_state.prev_manual = manual_input
+            st.rerun()
+        st.session_state.prev_manual = manual_input
+
+        # 최종 질의 결정
         if ex != "직접 입력":
             query = ex
+        else:
+            query = manual_input
 
         # DWA 파라미터
         pc1, pc2 = st.columns(2)
         with pc1:
             lambda_ = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_query",
                                 help="Stage 2 연속 조정 강도. 0이면 기본 가중치만 사용, 높을수록 밀도 신호(c_e, c_r, c_c) 반영 증가")
-            st.caption("💡 λ=0: 유형별 고정 가중치 | λ=0.3: 최적값 (Grid Search) | λ=0.5: 최대 조정")
+            st.caption("💡 λ=0: 유형별 고정 | **λ=0.3: 최적값** | λ=0.5: 최대 조정")
+            st.caption("🔍 Grid Search: λ를 0.1~0.5 범위에서 0.05 간격으로 탐색하여 F1 최대화 지점(0.3)을 도출")
         with pc2:
             top_k = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_query",
                               help="각 RAG 소스(Vector, Graph, Ontology)에서 가져올 상위 문서 수")
@@ -278,7 +300,8 @@ elif page == "🔍 질의 테스트 & 성능 비교":
         with sp1:
             sim_lambda = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_sim",
                                    help="Stage 2 연속 조정 강도. 0이면 기본 가중치만 사용, 높을수록 밀도 신호 반영 증가")
-            st.caption("💡 λ=0: 유형별 고정 가중치 | λ=0.3: 최적값 | λ=0.5: 최대 조정")
+            st.caption("💡 λ=0: 유형별 고정 | **λ=0.3: 최적값** | λ=0.5: 최대 조정")
+            st.caption("🔍 Grid Search: 0.1~0.5에서 0.05 간격 탐색 → F1 최대화 지점 0.3 도출")
         with sp2:
             sim_topk = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_sim",
                                  help="각 RAG 소스에서 가져올 상위 문서 수")
