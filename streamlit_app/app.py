@@ -301,6 +301,41 @@ elif page == "🔍 질의 테스트 & 성능 비교":
                 )
                 st.plotly_chart(fig, use_container_width=True)
 
+                # 가중치 적용 이유 설명
+                _weights = [("Vector(α)", w.alpha, "#378ADD"),
+                            ("Graph(β)", w.beta, "#1D9E75"),
+                            ("Ontology(γ)", w.gamma, "#D85A30")]
+                _dominant = max(_weights, key=lambda x: x[1])
+                _qtype = result.intent.query_type
+
+                _reason_map = {
+                    "simple": (
+                        "단순 사실 조회 질의로 분류되어 **Vector RAG**의 "
+                        "의미 유사도 검색이 가장 효과적입니다."
+                    ),
+                    "multi_hop": (
+                        "엔티티 간 관계를 추적하는 질의로 분류되어 "
+                        "**Graph RAG**의 BFS 탐색이 가장 효과적입니다."
+                    ),
+                    "conditional": (
+                        "속성 조건(나이, 직급 등) 필터링 질의로 분류되어 "
+                        "**Ontology RAG**의 규칙 기반 추론이 가장 효과적입니다."
+                    ),
+                }
+                st.markdown(
+                    f'<div style="background:rgba(255,255,255,0.05);border-radius:8px;'
+                    f'padding:10px;font-size:12px;line-height:1.7;'
+                    f'border:1px solid rgba(255,255,255,0.1);">'
+                    f'<b style="color:{_dominant[2]};">왜 {_dominant[0]}이 가장 높을까?</b><br>'
+                    f'{_reason_map.get(_qtype, "")}<br><br>'
+                    f'<b>Stage 1</b>: 질의 유형({_qtype})에 따라 기본 가중치 배분<br>'
+                    f'<b>Stage 2</b>: 밀도 신호(c_e={result.intent.c_e:.2f}, '
+                    f'c_r={result.intent.c_r:.2f}, c_c={result.intent.c_c:.2f})로 '
+                    f'미세 조정 → 최종 α={w.alpha:.3f}, β={w.beta:.3f}, γ={w.gamma:.3f}'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━
     # TAB 2: 시스템별 시뮬레이션
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━
