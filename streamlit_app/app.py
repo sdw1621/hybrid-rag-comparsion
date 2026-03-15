@@ -390,6 +390,63 @@ elif page == "🔍 질의 테스트 & 성능 비교":
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━
     with tab_bench:
         st.subheader("Table 13 — 전체 성능 비교 (0~1)")
+
+        # 비교 시스템 설명
+        st.markdown("##### 🏗️ 비교 시스템 설명")
+        bs1, bs2 = st.columns(2)
+        with bs1:
+            st.markdown(
+                '<div style="background:rgba(55,138,221,0.1);border-radius:8px;padding:14px;'
+                'border-left:4px solid #378ADD;margin-bottom:10px;">'
+                '<b style="color:#378ADD;">Vector-Only</b><br>'
+                '<span style="font-size:13px;">임베딩 유사도만으로 검색하는 기본 RAG. '
+                '단순 사실 질의에는 적합하나, 관계 추론이나 조건 필터링에 한계가 있습니다.</span></div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                '<div style="background:rgba(216,90,48,0.1);border-radius:8px;padding:14px;'
+                'border-left:4px solid #D85A30;margin-bottom:10px;">'
+                '<b style="color:#D85A30;">GraphRAG</b><br>'
+                '<span style="font-size:13px;">지식 그래프 기반 검색. 엔티티 간 관계 탐색에 강하지만, '
+                '비정형 텍스트 질의에서는 Vector 방식보다 불리합니다.</span></div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                '<div style="background:rgba(212,83,126,0.1);border-radius:8px;padding:14px;'
+                'border-left:4px solid #D4537E;">'
+                '<b style="color:#D4537E;">HybridRAG</b><br>'
+                '<span style="font-size:13px;">Vector + Graph 2개 소스를 결합한 시스템. '
+                '고정 가중치(50:50)로 병합하며, 질의 유형에 따른 동적 조절이 없습니다.</span></div>',
+                unsafe_allow_html=True,
+            )
+        with bs2:
+            st.markdown(
+                '<div style="background:rgba(186,117,23,0.1);border-radius:8px;padding:14px;'
+                'border-left:4px solid #BA7517;margin-bottom:10px;">'
+                '<b style="color:#BA7517;">Adaptive-RAG</b><br>'
+                '<span style="font-size:13px;">질의 복잡도에 따라 검색 전략을 전환하는 시스템. '
+                '단일 소스를 선택하므로 다중 소스의 보완 효과를 활용하지 못합니다.</span></div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                '<div style="background:rgba(29,158,117,0.1);border-radius:8px;padding:14px;'
+                'border-left:4px solid #1D9E75;margin-bottom:10px;">'
+                '<b style="color:#1D9E75;">Triple-Hybrid RAG ✓ (제안 시스템)</b><br>'
+                '<span style="font-size:13px;">Vector + Graph + Ontology 3개 소스를 '
+                '<b>DWA로 동적 결합</b>하는 시스템. 질의 유형과 밀도 신호에 따라 '
+                '최적 가중치를 실시간 배분하여 모든 지표에서 최고 성능을 달성합니다.</span></div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown(
+                '<div style="background:rgba(29,158,117,0.06);border-radius:8px;padding:12px;'
+                'border:1px dashed rgba(29,158,117,0.4);font-size:13px;">'
+                '🏆 <b>Triple-Hybrid</b>가 모든 5개 지표에서 1위를 차지하며, '
+                '2위(HybridRAG) 대비 F1 +6.2%, EM +9.9%, Faithfulness +8.5% 향상'
+                '</div>',
+                unsafe_allow_html=True,
+            )
+
+        st.markdown("")
         perf = {
             "시스템": ["Vector-Only", "GraphRAG", "HybridRAG", "Adaptive-RAG", "Triple-Hybrid"],
             "F1": [0.72, 0.79, 0.81, 0.78, 0.86],
