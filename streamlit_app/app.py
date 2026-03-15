@@ -99,8 +99,8 @@ if page == "🔍 질의 테스트":
         with left:
             st.markdown("#### 💬 답변")
             st.markdown(
-                f'<div style="background:#e8f5e9;border-radius:8px;padding:16px;'
-                f'border-left:4px solid #43a047">{result.answer}</div>',
+                f'<div style="background:rgba(216,90,48,0.15);border-radius:8px;padding:16px;'
+                f'border-left:4px solid #D85A30;color:#fff">{result.answer}</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("#### 📄 검색 컨텍스트")
