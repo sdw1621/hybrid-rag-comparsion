@@ -210,7 +210,7 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             lambda_ = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_query",
                                 help="Stage 2 연속 조정 강도. 0이면 기본 가중치만 사용, 높을수록 밀도 신호(c_e, c_r, c_c) 반영 증가")
             st.caption("💡 λ=0: 유형별 고정 | **λ=0.3: 최적값** | λ=0.5: 최대 조정")
-            st.caption("🔍 Grid Search: λ를 0.1~0.5 범위에서 0.05 간격으로 탐색하여 F1 최대화 지점(0.3)을 도출")
+            st.caption("🔍 Grid Search: 0.1부터 0.5까지 조금씩 바꿔보면서 정답률이 가장 높은 값을 찾은 결과 → 0.3이 최고!")
         with pc2:
             top_k = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_query",
                               help="각 RAG 소스(Vector, Graph, Ontology)에서 가져올 상위 문서 수")
@@ -301,7 +301,7 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             sim_lambda = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_sim",
                                    help="Stage 2 연속 조정 강도. 0이면 기본 가중치만 사용, 높을수록 밀도 신호 반영 증가")
             st.caption("💡 λ=0: 유형별 고정 | **λ=0.3: 최적값** | λ=0.5: 최대 조정")
-            st.caption("🔍 Grid Search: 0.1~0.5에서 0.05 간격 탐색 → F1 최대화 지점 0.3 도출")
+            st.caption("🔍 Grid Search: 0.1부터 0.5까지 하나씩 시도해서 정답률이 가장 높은 값을 찾음 → 0.3이 최고!")
         with sp2:
             sim_topk = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_sim",
                                  help="각 RAG 소스에서 가져올 상위 문서 수")
@@ -793,8 +793,8 @@ elif page == "⚖️ Ablation Study":
             '<div style="background:rgba(186,117,23,0.12);border-radius:8px;padding:16px;'
             'border-left:4px solid #BA7517;">'
             '<b style="color:#BA7517;">λ = 0.3 최적 값 (Grid Search)</b><br>'
-            '<span style="font-size:13px;">λ 값을 0.1~0.5 범위에서 Grid Search한 결과 0.3이 최적. '
-            'λ가 너무 크면 Stage 1 기본 가중치가 과도하게 변경되어 오히려 성능이 저하됩니다.</span></div>',
+            '<span style="font-size:13px;">λ를 0.1부터 0.5까지 하나씩 바꿔가며 테스트한 결과 0.3일 때 정답률이 가장 높았습니다. '
+            'λ가 너무 크면 기본 가중치가 과도하게 흔들려서 오히려 성능이 떨어집니다.</span></div>',
             unsafe_allow_html=True,
         )
 
