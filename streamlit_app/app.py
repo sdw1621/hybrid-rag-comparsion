@@ -268,8 +268,10 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             sim_query = st.selectbox("🔎 시뮬레이션 질의 선택", SIM_QUERIES)
         with sc2:
             sim_speed = st.select_slider(
-                "⏱ 시뮬레이션 속도", options=["빠르게", "보통", "느리게"], value="보통"
+                "⏱ 시뮬레이션 속도", options=["빠르게", "보통", "느리게"], value="보통",
+                help="5개 시스템의 처리 과정을 순차적으로 보여주는 애니메이션 속도를 조절합니다"
             )
+            st.caption("💡 빠르게: 결과만 빠르게 확인 | 보통: 시스템별 처리 차이 체감 | 느리게: 발표/시연용")
 
         # DWA 파라미터
         sp1, sp2 = st.columns(2)
