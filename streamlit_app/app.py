@@ -186,9 +186,13 @@ elif page == "🔍 질의 테스트 & 성능 비교":
         # DWA 파라미터
         pc1, pc2 = st.columns(2)
         with pc1:
-            lambda_ = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_query")
+            lambda_ = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_query",
+                                help="Stage 2 연속 조정 강도. 0이면 기본 가중치만 사용, 높을수록 밀도 신호(c_e, c_r, c_c) 반영 증가")
+            st.caption("💡 λ=0: 유형별 고정 가중치 | λ=0.3: 최적값 (Grid Search) | λ=0.5: 최대 조정")
         with pc2:
-            top_k = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_query")
+            top_k = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_query",
+                              help="각 RAG 소스(Vector, Graph, Ontology)에서 가져올 상위 문서 수")
+            st.caption("💡 k=1: 최상위 1개만 | k=3: 기본값 (정확도/속도 균형) | k=5: 최대 검색")
 
         if st.button("🔎 검색", use_container_width=True, key="btn_query") and query:
             if not os.environ.get("OPENAI_API_KEY"):
@@ -270,9 +274,13 @@ elif page == "🔍 질의 테스트 & 성능 비교":
         # DWA 파라미터
         sp1, sp2 = st.columns(2)
         with sp1:
-            sim_lambda = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_sim")
+            sim_lambda = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_sim",
+                                   help="Stage 2 연속 조정 강도. 0이면 기본 가중치만 사용, 높을수록 밀도 신호 반영 증가")
+            st.caption("💡 λ=0: 유형별 고정 가중치 | λ=0.3: 최적값 | λ=0.5: 최대 조정")
         with sp2:
-            sim_topk = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_sim")
+            sim_topk = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_sim",
+                                 help="각 RAG 소스에서 가져올 상위 문서 수")
+            st.caption("💡 k=1: 최상위 1개만 | k=3: 기본값 | k=5: 최대 검색")
 
         speed_map = {"빠르게": 0.3, "보통": 0.7, "느리게": 1.2}
 
