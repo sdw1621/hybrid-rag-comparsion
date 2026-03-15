@@ -318,6 +318,28 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             st.markdown(
                 f"**질의:** `{sim_query}`  ·  **유형:** `{QUERY_TYPE_LABELS[q_type]}`"
             )
+
+            # 유형별 설명
+            type_desc = {
+                "simple": ("💬", "#378ADD", "Simple (단순 질의)",
+                           "단일 엔티티의 속성을 직접 조회합니다. Vector RAG의 의미 유사도 검색이 주로 활용되며, "
+                           "DWA가 Vector 가중치(α)를 높게 배분합니다."),
+                "multihop": ("🔗", "#D85A30", "Multi-hop (다중 추론 질의)",
+                             "2개 이상 엔티티 간 관계를 따라가며 답을 찾습니다. Graph RAG의 BFS 탐색이 핵심이며, "
+                             "DWA가 Graph 가중치(β)를 높게 배분합니다."),
+                "conditional": ("📐", "#1D9E75", "Conditional (조건부 질의)",
+                                "나이, 직급 등 속성 조건으로 필터링합니다. Ontology RAG의 규칙 기반 추론이 핵심이며, "
+                                "DWA가 Ontology 가중치(γ)를 높게 배분합니다."),
+            }
+            icon, color, title, desc = type_desc[q_type]
+            st.markdown(
+                f'<div style="background:rgba({int(color[1:3],16)},{int(color[3:5],16)},{int(color[5:7],16)},0.1);'
+                f'border-radius:8px;padding:12px;border-left:4px solid {color};margin-top:8px;">'
+                f'{icon} <b style="color:{color};">{title}</b><br>'
+                f'<span style="font-size:13px;">{desc}</span></div>',
+                unsafe_allow_html=True,
+            )
+
             st.markdown("---")
 
             result_containers = []
