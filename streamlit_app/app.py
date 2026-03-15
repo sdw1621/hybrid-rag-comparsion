@@ -173,13 +173,13 @@ elif page == "🔍 질의 테스트 & 성능 비교":
         ]
         c1, c2 = st.columns([1, 1])
         with c1:
+            ex = st.selectbox("예시 질의", ["직접 입력"] + examples)
+        with c2:
             query = st.text_area(
-                "질문을 입력하세요",
+                "또는 직접 질문을 작성해 보세요",
                 placeholder="예: 김철수 교수의 연구 분야는?",
                 height=100,
             )
-        with c2:
-            ex = st.selectbox("예시 질의", ["직접 입력"] + examples)
         if ex != "직접 입력":
             query = ex
 
