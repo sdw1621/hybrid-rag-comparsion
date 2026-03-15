@@ -241,24 +241,24 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             # 결과 지표 설명
             _qtype = result.intent.query_type
             _qtype_desc = {
-                "simple": "단일 엔티티 속성 조회 → Vector RAG 중심 (α↑)",
-                "multi_hop": "엔티티 간 관계 추적 필요 → Graph RAG 중심 (β↑)",
-                "conditional": "속성 조건 필터링 필요 → Ontology RAG 중심 (γ↑)",
+                "simple": "사람이나 과목 하나를 찾는 질문 → 텍스트 검색이 제일 잘 맞아요",
+                "multi_hop": "A와 B의 관계를 따라가는 질문 → 지식 그래프 탐색이 제일 잘 맞아요",
+                "conditional": "나이·직급 등 조건으로 걸러내는 질문 → 규칙 기반 추론이 제일 잘 맞아요",
             }
             _comp = result.intent.complexity_score
             if _comp < 0.3:
-                _comp_desc = "낮음 — 단순한 질의로, 단일 소스로도 충분히 처리 가능"
+                _comp_desc = "낮음 — 간단한 질문이라 하나의 검색 방법으로도 잘 찾아요"
             elif _comp < 0.6:
-                _comp_desc = "보통 — 2개 이상 소스의 협력이 성능 향상에 기여"
+                _comp_desc = "보통 — 여러 검색 방법을 같이 쓰면 더 좋은 답을 찾아요"
             else:
-                _comp_desc = "높음 — 복잡한 질의로, 3개 소스 모두의 협력이 필수"
+                _comp_desc = "높음 — 어려운 질문이라 3가지 검색을 모두 동원해야 해요"
             _ent_count = len(result.intent.entities)
 
             e1, e2, e3, e4 = st.columns(4)
-            e1.caption(f"⏱ 3개 RAG 소스 병렬 검색 + LLM 생성 시간")
+            e1.caption("⏱ 3가지 방법으로 동시에 찾고, AI가 답변을 만드는 데 걸린 시간")
             e2.caption(f"📌 {_qtype_desc.get(_qtype, _qtype)}")
             e3.caption(f"📊 {_comp_desc}")
-            e4.caption(f"🏷️ 질의에서 감지된 사람·학과·과목 등 고유명사 {_ent_count}개")
+            e4.caption(f"🏷️ 질문에서 찾아낸 이름(사람·학과·과목 등) {_ent_count}개 — 많을수록 복잡한 질문")
 
             st.markdown("---")
 
