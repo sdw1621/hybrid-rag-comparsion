@@ -60,11 +60,12 @@ if page == "🔍 질의 테스트":
         "딥러닝 과목 담당 교수의 연구 분야는?",
         "AI융합연구소 참여 교수 목록은?",
     ]
-    c1, c2 = st.columns([3, 1])
+    c1, c2 = st.columns([1, 1])
     with c1:
-        query = st.text_input(
+        query = st.text_area(
             "질문을 입력하세요",
             placeholder="예: 김철수 교수의 연구 분야는?",
+            height=100,
         )
     with c2:
         ex = st.selectbox("예시 질의", ["직접 입력"] + examples)
