@@ -237,6 +237,29 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             m2.metric("질의 유형", result.intent.query_type)
             m3.metric("복잡도", f"{result.intent.complexity_score:.2f}")
             m4.metric("엔티티 수", len(result.intent.entities))
+
+            # 결과 지표 설명
+            _qtype = result.intent.query_type
+            _qtype_desc = {
+                "simple": "단일 엔티티 속성 조회 → Vector RAG 중심 (α↑)",
+                "multi_hop": "엔티티 간 관계 추적 필요 → Graph RAG 중심 (β↑)",
+                "conditional": "속성 조건 필터링 필요 → Ontology RAG 중심 (γ↑)",
+            }
+            _comp = result.intent.complexity_score
+            if _comp < 0.3:
+                _comp_desc = "낮음 — 단순한 질의로, 단일 소스로도 충분히 처리 가능"
+            elif _comp < 0.6:
+                _comp_desc = "보통 — 2개 이상 소스의 협력이 성능 향상에 기여"
+            else:
+                _comp_desc = "높음 — 복잡한 질의로, 3개 소스 모두의 협력이 필수"
+            _ent_count = len(result.intent.entities)
+
+            e1, e2, e3, e4 = st.columns(4)
+            e1.caption(f"⏱ 3개 RAG 소스 병렬 검색 + LLM 생성 시간")
+            e2.caption(f"📌 {_qtype_desc.get(_qtype, _qtype)}")
+            e3.caption(f"📊 {_comp_desc}")
+            e4.caption(f"🏷️ 질의에서 감지된 사람·학과·과목 등 고유명사 {_ent_count}개")
+
             st.markdown("---")
 
             left, right = st.columns([2, 1])
