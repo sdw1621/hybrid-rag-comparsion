@@ -147,7 +147,7 @@ elif page == "📊 성능 비교":
     }
     df = pd.DataFrame(perf)
     st.dataframe(
-        df.style.highlight_max(subset=df.columns[1:], color="#c8e6c9"),
+        df.style.highlight_max(subset=df.columns[1:], color="#D85A30"),
         hide_index=True,
         use_container_width=True,
     )
@@ -200,7 +200,7 @@ elif page == "⚖️ Ablation Study":
     df2 = pd.DataFrame(abl)
     st.dataframe(
         df2.style.highlight_max(
-            subset=["F1", "EM", "Multi-hop EM", "Conditional EM"], color="#c8e6c9"
+            subset=["F1", "EM", "Multi-hop EM", "Conditional EM"], color="#D85A30"
         ),
         hide_index=True,
         use_container_width=True,
