@@ -25,9 +25,6 @@ api_key = st.sidebar.text_input(
 if api_key:
     os.environ["OPENAI_API_KEY"] = api_key
 st.sidebar.markdown("---")
-lambda_ = st.sidebar.slider("lambda (DWA)", 0.0, 0.5, 0.3, 0.05)
-top_k = st.sidebar.slider("top-k", 1, 5, 3)
-st.sidebar.markdown("---")
 page = st.sidebar.radio(
     "📖 페이지",
     ["ℹ️ 시스템 정보", "🔍 질의 테스트 & 성능 비교", "⚖️ Ablation Study"],
@@ -186,6 +183,13 @@ elif page == "🔍 질의 테스트 & 성능 비교":
         if ex != "직접 입력":
             query = ex
 
+        # DWA 파라미터
+        pc1, pc2 = st.columns(2)
+        with pc1:
+            lambda_ = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_query")
+        with pc2:
+            top_k = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_query")
+
         if st.button("🔎 검색", use_container_width=True, key="btn_query") and query:
             if not os.environ.get("OPENAI_API_KEY"):
                 st.error("⚠️ 사이드바에서 OpenAI API Key를 입력해 주세요.")
@@ -262,6 +266,13 @@ elif page == "🔍 질의 테스트 & 성능 비교":
             sim_speed = st.select_slider(
                 "⏱ 시뮬레이션 속도", options=["빠르게", "보통", "느리게"], value="보통"
             )
+
+        # DWA 파라미터
+        sp1, sp2 = st.columns(2)
+        with sp1:
+            sim_lambda = st.slider("λ (DWA 강도)", 0.0, 0.5, 0.3, 0.05, key="lambda_sim")
+        with sp2:
+            sim_topk = st.slider("top-k (검색 결과 수)", 1, 5, 3, key="topk_sim")
 
         speed_map = {"빠르게": 0.3, "보통": 0.7, "느리게": 1.2}
 
