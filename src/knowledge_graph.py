@@ -52,30 +52,49 @@ class KnowledgeGraph:
         seeds = [nid for nid, info in self.nodes.items()
                  if info['name'] in query or query in info['name']]
         if not seeds:
-            # 폴백: 모든 노드 중 관련 있는 것
+            # 폴백: 부분 매칭 시도
+            tokens = [t for t in query.replace("?", "").split() if len(t) >= 2]
+            seeds = [nid for nid, info in self.nodes.items()
+                     if any(tok in info['name'] for tok in tokens)]
+        if not seeds:
             seeds = list(self.nodes.keys())[:3]
 
         visited, results = set(), []
         queue = deque([(s, 0) for s in seeds])
 
-        while queue and len(results) < top_k * 10:
+        while queue and len(results) < top_k * 20:
             node_id, depth = queue.popleft()
             if node_id in visited or depth > max_hops:
                 continue
             visited.add(node_id)
             node = self.nodes.get(node_id, {})
-            # 이 노드에서 나가는 엣지로 문장 생성
+
+            # 이 노드에서 나가는 모든 엣지로 문장 생성 (역방향 포함)
             for rel, neighbor in self.adj.get(node_id, []):
-                if not rel.startswith('inv_'):
-                    n_info = self.nodes.get(neighbor, {})
+                n_info = self.nodes.get(neighbor, {})
+                if rel.startswith('inv_'):
+                    # 역방향: "인공지능학과 ←[소속]-- 정수진" → "정수진 --[소속]--> 인공지능학과"
+                    real_rel = rel[4:]
+                    results.append(
+                        f"{n_info.get('name','?')} --[{real_rel}]--> {node.get('name','?')}"
+                    )
+                else:
                     results.append(
                         f"{node.get('name','?')} --[{rel}]--> {n_info.get('name','?')}"
                     )
+
             if depth < max_hops:
                 for _, neighbor in self.adj.get(node_id, []):
                     queue.append((neighbor, depth + 1))
 
-        return results[:top_k]
+        # 중복 제거 후 반환 (top_k 넉넉하게)
+        seen = set()
+        unique = []
+        for r in results:
+            if r not in seen:
+                seen.add(r)
+                unique.append(r)
+        return unique[:top_k * 3]
 
     def _neo4j_search(self, query: str, top_k: int) -> List[str]:
         cypher = """

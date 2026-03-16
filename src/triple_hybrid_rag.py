@@ -29,8 +29,10 @@ class RAGResult:
 
 
 PROMPT_TEMPLATE = (
-    "Based on the following context, answer the question accurately. "
-    "If the answer cannot be determined from the context, state that the information is not available.\n\n"
+    "다음 컨텍스트를 기반으로 질문에 정확하게 답변하세요. "
+    "컨텍스트에서 답을 찾을 수 없는 경우에만 '정보를 찾을 수 없습니다'라고 답하세요. "
+    "Graph 경로 정보(A --[관계]--> B)도 참고하여 관계를 추론하세요. "
+    "가능한 한 구체적이고 상세하게 답변하세요.\n\n"
     "Context:\n{context}\n\n"
     "Question: {query}\n\n"
     "Answer:"
@@ -153,11 +155,12 @@ class TripleHybridRAG:
 
     def _merge_contexts(self, v_ctxs, g_ctxs, o_ctxs,
                         alpha, beta, gamma) -> str:
-        """가중치 비례 컨텍스트 조합"""
+        """가중치 비례 컨텍스트 조합 — 지배적 소스에 더 많은 슬롯 배분"""
         total = alpha + beta + gamma
-        n_v = max(1, round(self.top_k * alpha / total))
-        n_g = max(1, round(self.top_k * beta  / total))
-        n_o = max(1, round(self.top_k * gamma / total))
+        budget = self.top_k * 3  # 총 컨텍스트 슬롯 확대
+        n_v = max(1, round(budget * alpha / total))
+        n_g = max(1, round(budget * beta  / total))
+        n_o = max(1, round(budget * gamma / total))
 
         parts = []
         if v_ctxs:
