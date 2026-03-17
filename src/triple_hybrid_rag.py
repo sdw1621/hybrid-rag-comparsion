@@ -29,8 +29,10 @@ class RAGResult:
 
 
 PROMPT_TEMPLATE = (
-    "Based on the following context, answer the question accurately. "
-    "If the answer cannot be determined from the context, state that the information is not available.\n\n"
+    "다음 컨텍스트를 기반으로 질문에 정확하게 답변하세요. "
+    "컨텍스트에서 답을 찾을 수 없는 경우에만 '정보를 찾을 수 없습니다'라고 답하세요. "
+    "Graph 경로 정보(A --[관계]--> B)도 참고하여 관계를 추론하세요. "
+    "가능한 한 구체적이고 상세하게 답변하세요.\n\n"
     "Context:\n{context}\n\n"
     "Question: {query}\n\n"
     "Answer:"
@@ -88,51 +90,42 @@ class TripleHybridRAG:
             self.graph.add_node(dst, dst, dst_type)
         self.graph.add_edge(src, relation, dst)
 
-    def load_university_sample(self):
-        """논문 실험 데이터 일괄 로드 — 60개 학과 / ~600명 교수 / ~1,500개 과목 / 400개 프로젝트"""
-        import sys, os
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-        from data.dataset_generator import generate_university_data
-
-        self.graph.load_university_data()
-
-        data    = generate_university_data(seed=42)
-        docs    = []
-
-        # ── 교수 소개 문서 (교수 1명당 1건) ─────────────────────────
-        for prof in data["professors"]:
-            courses_str = ", ".join(prof["courses"]) if prof["courses"] else "없음"
-            collab_str  = ", ".join(prof["collab"])  if prof["collab"]  else "없음"
-            docs.append(
-                f"{prof['name']} 교수는 {prof['age']}세이며 {prof['dept']} 소속이다. "
-                f"담당 과목: {courses_str}. "
-                f"연구 분야: {prof['research']}. "
-                f"협력 교수: {collab_str}."
-            )
-
-        # ── 학과 안내 문서 (학과 1개당 1건) ─────────────────────────
-        for dept in data["depts"]:
-            prof_names   = data["dept_profs"].get(dept, [])
-            course_names = data["dept_courses"].get(dept, [])
-            docs.append(
-                f"{dept} 소속 교수는 총 {len(prof_names)}명이며, "
-                f"개설 과목 수는 {len(course_names)}개다. "
-                f"교수 목록: {', '.join(prof_names[:5])}{'...' if len(prof_names) > 5 else ''}. "
-                f"대표 과목: {', '.join(course_names[:5])}{'...' if len(course_names) > 5 else ''}."
-            )
-
-        # ── 프로젝트 문서 (프로젝트 1개당 1건) ──────────────────────
-        for pname, pprofs in data["projects"].items():
-            docs.append(
-                f"{pname} 프로젝트에는 {', '.join(pprofs)}가 참여한다. "
-                f"총 {len(pprofs)}명의 교수가 참여하는 연구 과제다."
-            )
-
-        self.add_documents(docs)
-        print(f"Vector 문서: {len(docs)}건 로드 완료 "
-              f"(교수 {len(data['professors'])}건 + "
-              f"학과 {len(data['depts'])}건 + "
-              f"프로젝트 {len(data['projects'])}건)")
+    def load_university_sample(self, extended: bool = True):
+        """
+        논문 실험 데이터 일괄 로드
+        extended=True  → 577명/60학과/1,505과목/400프로젝트/문서 1,037건 (권장)
+        extended=False → 원래 소규모 데이터 (하위 호환)
+        """
+        if extended:
+            import sys, os
+            sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+            from data.dataset_generator import generate_university_data
+            depts, professors, courses, projects, dept_profs, dept_courses, course_profs = \
+                generate_university_data(seed=42)
+            self.graph.load_university_data()
+            docs = []
+            for p in professors:
+                dept_name = next((d["name"] for d in depts if d["id"] == p["dept_id"]), "")
+                docs.append(
+                    f"{p['name']} 교수는 {p['age']}세이며 {dept_name} 소속이다. "
+                    f"직급은 {p['rank']}이고 연구 분야는 {p['research']}이다."
+                )
+            for d in depts:
+                docs.append(f"{d['name']}은(는) {d['college']} 소속 학과이다.")
+            for pr in projects:
+                docs.append(
+                    f"{pr['name']} 프로젝트는 {pr['type']} 유형이며 "
+                    f"기간은 {pr['start']}~{pr['end']}이다."
+                )
+            self.add_documents(docs)
+        else:
+            self.graph.load_university_data()
+            self.add_documents([
+                "김철수 교수는 45세이며 컴퓨터공학과 소속이다. 인공지능개론, 딥러닝, 강화학습을 담당한다.",
+                "이영희 교수는 38세이며 인공지능학과 소속이다. 딥러닝, 컴퓨터비전을 담당한다.",
+                "박민수 교수는 52세이며 컴퓨터공학과 소속이다. 자연어처리를 담당한다.",
+                "정수진 교수는 36세이며 인공지능학과 소속이다. 컴퓨터비전을 담당한다.",
+            ])
 
     def build(self):
         """벡터 인덱스 구축"""
@@ -177,11 +170,12 @@ class TripleHybridRAG:
 
     def _merge_contexts(self, v_ctxs, g_ctxs, o_ctxs,
                         alpha, beta, gamma) -> str:
-        """가중치 비례 컨텍스트 조합"""
+        """가중치 비례 컨텍스트 조합 — 지배적 소스에 더 많은 슬롯 배분"""
         total = alpha + beta + gamma
-        n_v = max(1, round(self.top_k * alpha / total))
-        n_g = max(1, round(self.top_k * beta  / total))
-        n_o = max(1, round(self.top_k * gamma / total))
+        budget = self.top_k * 3  # 총 컨텍스트 슬롯 확대
+        n_v = max(1, round(budget * alpha / total))
+        n_g = max(1, round(budget * beta  / total))
+        n_o = max(1, round(budget * gamma / total))
 
         parts = []
         if v_ctxs:
