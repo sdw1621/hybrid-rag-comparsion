@@ -89,54 +89,79 @@ class KnowledgeGraph:
             return [record['path'] for record in result]
 
     def load_university_data(self):
-        """논문 실험용 대학 행정 데이터 로드"""
-        # 노드
-        professors = [
-            ("p1","김철수","Professor",{"dept":"컴퓨터공학과","age":45}),
-            ("p2","이영희","Professor",{"dept":"인공지능학과","age":38}),
-            ("p3","박민수","Professor",{"dept":"컴퓨터공학과","age":52}),
-            ("p4","정수진","Professor",{"dept":"인공지능학과","age":36}),
-        ]
-        for nid, name, ntype, props in professors:
-            self.add_node(nid, name, ntype, **props)
+        """대학 행정 데이터 로드 — 60개 학과 / ~600명 교수 / ~1,500개 과목 / 400개 프로젝트"""
+        import sys, os
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+        from data.dataset_generator import generate_university_data
 
-        courses = [
-            ("c1","인공지능개론","Course"),
-            ("c2","딥러닝","Course"),
-            ("c3","자연어처리","Course"),
-            ("c4","컴퓨터비전","Course"),
-            ("c5","강화학습","Course"),
-        ]
-        for nid, name, ntype in courses:
-            self.add_node(nid, name, ntype)
+        data = generate_university_data(seed=42)
 
-        depts = [
-            ("d1","컴퓨터공학과","Department"),
-            ("d2","인공지능학과","Department"),
-        ]
-        for nid, name, ntype in depts:
-            self.add_node(nid, name, ntype)
+        # ── 학과 노드 ──────────────────────────────────────────────
+        for i, dept in enumerate(data["depts"]):
+            self.add_node(f"d{i}", dept, "Department")
 
-        projs = [
-            ("pr1","AI융합프로젝트","Project"),
-            ("pr2","NLP연구프로젝트","Project"),
-        ]
-        for nid, name, ntype in projs:
-            self.add_node(nid, name, ntype)
+        dept_nid = {dept: f"d{i}" for i, dept in enumerate(data["depts"])}
 
-        # 엣지
-        edges = [
-            ("p1","담당","c1"), ("p1","담당","c2"), ("p1","담당","c5"),
-            ("p2","담당","c2"), ("p2","담당","c4"),
-            ("p3","담당","c3"),
-            ("p4","담당","c4"),
-            ("p1","소속","d1"), ("p3","소속","d1"),
-            ("p2","소속","d2"), ("p4","소속","d2"),
-            ("p1","협력","p2"), ("p2","협력","p3"),
-            ("p1","참여","pr1"), ("p2","참여","pr1"),
-            ("p3","참여","pr2"),
-        ]
-        for s, r, d in edges:
-            self.add_edge(s, r, d)
+        # ── 교수 노드 ──────────────────────────────────────────────
+        for prof in data["professors"]:
+            self.add_node(prof["id"], prof["name"], "Professor",
+                          dept=prof["dept"], age=prof["age"],
+                          research=prof["research"])
 
-        print(f"✅ KnowledgeGraph: 노드 {len(self.nodes)}개, 엣지 {len(self.edges)}개")
+        prof_nid = {p["name"]: p["id"] for p in data["professors"]}
+
+        # ── 과목 노드 ──────────────────────────────────────────────
+        for i, course in enumerate(data["courses"]):
+            self.add_node(f"c{i}", course["name"], "Course",
+                          dept=course["dept"])
+
+        course_nid = {c["name"]: f"c{i}" for i, c in enumerate(data["courses"])}
+
+        # ── 프로젝트 노드 ──────────────────────────────────────────
+        for i, (pname, _) in enumerate(data["projects"].items()):
+            self.add_node(f"pr{i}", pname, "Project")
+
+        proj_nid = {pname: f"pr{i}" for i, pname in enumerate(data["projects"].keys())}
+
+        # ── 엣지: 소속 (교수 → 학과) ──────────────────────────────
+        for prof in data["professors"]:
+            pid = prof["id"]
+            did = dept_nid.get(prof["dept"])
+            if did:
+                self.add_edge(pid, "소속", did)
+
+        # ── 엣지: 담당 (교수 → 과목) ──────────────────────────────
+        for prof in data["professors"]:
+            for cname in prof["courses"]:
+                cid = course_nid.get(cname)
+                if cid:
+                    self.add_edge(prof["id"], "담당", cid)
+
+        # ── 엣지: 협력 (교수 → 교수) ──────────────────────────────
+        added_collab = set()
+        for prof in data["professors"]:
+            for cname in prof["collab"]:
+                pair = tuple(sorted([prof["name"], cname]))
+                if pair not in added_collab:
+                    cid2 = prof_nid.get(cname)
+                    if cid2:
+                        self.add_edge(prof["id"], "협력", cid2)
+                    added_collab.add(pair)
+
+        # ── 엣지: 참여 (교수 → 프로젝트) ─────────────────────────
+        for pname, pprofs in data["projects"].items():
+            prid = proj_nid.get(pname)
+            if prid:
+                for pname2 in pprofs:
+                    pid2 = prof_nid.get(pname2)
+                    if pid2:
+                        self.add_edge(pid2, "참여", prid)
+
+        # ── 엣지: 개설 (과목 → 학과) ──────────────────────────────
+        for i, course in enumerate(data["courses"]):
+            cid = f"c{i}"
+            did = dept_nid.get(course["dept"])
+            if did:
+                self.add_edge(cid, "개설", did)
+
+        print(f"KnowledgeGraph: 노드 {len(self.nodes)}개, 엣지 {len(self.edges)}개")

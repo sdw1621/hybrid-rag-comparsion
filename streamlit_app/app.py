@@ -79,15 +79,15 @@ if page == "🔍 질의 테스트":
     st.subheader("질의 입력")
 
     example_queries = [
-        "김철수 교수가 담당하는 과목은 무엇인가요?",
-        "컴퓨터공학과 소속 교수 중 40세 이하는 누구인가요?",
-        "이영희 교수가 소속된 학과의 다른 교수는?",
-        "AI융합프로젝트에 참여하는 교수와 그 담당 과목은?",
+        "컴퓨터공학과 소속 교수는 몇 명인가요?",
+        "인공지능학과 소속 45세 이하 교수는 누구인가요?",
+        "소프트웨어공학과 교수가 담당하는 과목 목록은?",
+        "AI기술연구 프로젝트 참여 교수들의 소속 학과는?",
     ]
 
     col1, col2 = st.columns([3, 1])
     with col1:
-        query = st.text_input("질문을 입력하세요", placeholder="예: 김철수 교수의 연구 분야는?")
+        query = st.text_input("질문을 입력하세요", placeholder="예: 컴퓨터공학과 소속 교수 중 45세 이하는 누구인가요?")
     with col2:
         example = st.selectbox("예시 질의", ["직접 입력"] + example_queries)
         if example != "직접 입력":
@@ -172,14 +172,14 @@ if page == "🔍 질의 테스트":
 elif page == "📊 성능 비교":
     st.subheader("📊 논문 Table 13 — 시스템별 성능 비교")
 
-    # 논문 실험 결과 데이터
+    # 논문 실험 결과 데이터 (Gold QA 5,000쌍 · 3회 반복 기준)
     perf_data = {
         "System":      ["Vector-Only","GraphRAG","HybridRAG","Adaptive-RAG","Triple-Hybrid"],
-        "F1":          [0.72, 0.79, 0.81, 0.78, 0.86],
-        "EM":          [0.58, 0.68, 0.71, 0.66, 0.78],
-        "Recall@3":    [0.81, 0.86, 0.88, 0.84, 0.92],
-        "Precision":   [0.69, 0.75, 0.79, 0.74, 0.84],
-        "Faithfulness":[0.71, 0.78, 0.82, 0.76, 0.89],
+        "F1":          [0.71, 0.78, 0.80, 0.77, 0.85],
+        "EM":          [0.57, 0.67, 0.70, 0.65, 0.77],
+        "Recall@3":    [0.80, 0.85, 0.87, 0.83, 0.91],
+        "Precision":   [0.68, 0.74, 0.78, 0.73, 0.83],
+        "Faithfulness":[0.70, 0.77, 0.81, 0.75, 0.88],
     }
     df_perf = pd.DataFrame(perf_data)
 
@@ -212,11 +212,11 @@ elif page == "📊 성능 비교":
     st.subheader("질의 유형별 EM (Table 14)")
     qt_data = {
         "Query Type":  ["Simple","Multi-hop","Conditional"],
-        "V-Only Raw":  [0.62, 0.25, 0.36],
-        "V-Only Norm": [0.68, 0.31, 0.42],
-        "Triple Raw":  [0.76, 0.91, 0.85],
-        "Triple Norm": [0.82, 0.96, 0.91],
-        "Improvement": ["+20.6%", "+310%", "+116.7%"],
+        "V-Only Raw":  [0.61, 0.24, 0.35],
+        "V-Only Norm": [0.67, 0.30, 0.41],
+        "Triple Raw":  [0.75, 0.90, 0.84],
+        "Triple Norm": [0.81, 0.95, 0.90],
+        "Improvement": ["+20.9%", "+216.7%", "+119.5%"],
     }
     df_qt = pd.DataFrame(qt_data)
     st.dataframe(df_qt, hide_index=True, use_container_width=True)
@@ -230,12 +230,12 @@ elif page == "⚖️ Ablation Study":
 
     abl_data = {
         "Config":          ["(A) Equal Weight","(B) Type-Fixed","(C) Full DWA"],
-        "F1":              [0.81, 0.84, 0.86],
+        "F1":              [0.79, 0.83, 0.85],
         "F1_std":          [0.02, 0.01, 0.01],
-        "EM":              [0.69, 0.75, 0.78],
-        "Multi-hop EM":    [0.89, 0.93, 0.96],
-        "Conditional EM":  [0.85, 0.90, 0.94],
-        "ΔF1 vs (C)":      ["-5.8%","-2.3%","baseline"],
+        "EM":              [0.67, 0.74, 0.77],
+        "Multi-hop EM":    [0.87, 0.92, 0.95],
+        "Conditional EM":  [0.83, 0.88, 0.93],
+        "ΔF1 vs (C)":      ["-7.1%","-2.4%","baseline"],
     }
     df_abl = pd.DataFrame(abl_data)
     st.dataframe(
@@ -257,7 +257,7 @@ elif page == "⚖️ Ablation Study":
     )
     st.plotly_chart(fig2, use_container_width=True)
 
-    st.info("💡 (A)→(B): 기본 가중치 분화로 F1 +3.7% 향상 | (B)→(C): 연속 조정으로 Multi-hop EM +3.2%p 추가 향상")
+    st.info("💡 (A)→(B): 기본 가중치 분화로 F1 +5.1% 향상 | (B)→(C): 연속 조정으로 Multi-hop EM +3.0%p 추가 향상")
 
 
 # ════════════════════════════════════════════════════════
@@ -272,10 +272,10 @@ elif page == "ℹ️ 시스템 정보":
         "Vector Index": "FAISS IndexFlatIP (cosine)",
         "Chunk Size": "1,000자 / overlap 200자",
         "top-k": "3",
-        "Graph": "BFS max_depth=3 (Neo4j 호환)",
+        "Graph": "BFS max_depth=3 (Neo4j 호환) | 노드 2,542개 · 엣지 6,889개",
         "Ontology": "OWL / Owlready2",
         "DWA λ": "0.3 (grid search 0.1~0.5)",
-        "Dataset": "500 Gold QA (Simple 40% / Multi-hop 35% / Conditional 25%)",
+        "Dataset": "Gold QA 5,000쌍 (Simple 40% · Multi-hop 35% · Conditional 25%) | Vector 1,037건 · KG 노드 2,542 · 엣지 6,889 | 60개 학과 · 577명 교수 · 1,505개 과목 · 400개 프로젝트",
         "GitHub": "https://github.com/sdw1621/hybrid-rag-comparsion",
     }
     for k, v in info.items():

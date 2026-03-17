@@ -89,23 +89,50 @@ class TripleHybridRAG:
         self.graph.add_edge(src, relation, dst)
 
     def load_university_sample(self):
-        """논문 실험 데이터 일괄 로드"""
+        """논문 실험 데이터 일괄 로드 — 60개 학과 / ~600명 교수 / ~1,500개 과목 / 400개 프로젝트"""
+        import sys, os
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+        from data.dataset_generator import generate_university_data
+
         self.graph.load_university_data()
-        docs = [
-            "김철수 교수는 45세이며 컴퓨터공학과 소속이다. 인공지능개론, 딥러닝, 강화학습을 담당한다. 머신러닝과 자연어처리를 연구하며 이영희 교수와 협력한다.",
-            "이영희 교수는 38세이며 인공지능학과 소속이다. 딥러닝, 컴퓨터비전을 담당한다. 딥러닝과 컴퓨터비전을 연구하며 김철수, 박민수 교수와 협력한다.",
-            "박민수 교수는 52세이며 컴퓨터공학과 소속이다. 자연어처리를 담당한다. 자연어처리와 정보검색을 연구한다.",
-            "정수진 교수는 36세이며 인공지능학과 소속이다. 컴퓨터비전을 담당한다. 딥러닝과 컴퓨터비전을 연구한다.",
-            "컴퓨터공학과에는 김철수 교수(45세)와 박민수 교수(52세)가 소속되어 있다.",
-            "인공지능학과에는 이영희 교수(38세)와 정수진 교수(36세)가 소속되어 있다.",
-            "인공지능개론은 3학점 과목으로 김철수 교수가 담당한다. AI 기초 개념과 알고리즘을 다룬다.",
-            "딥러닝은 3학점 과목으로 김철수, 이영희 교수가 공동 담당한다. CNN, RNN, Transformer를 다룬다.",
-            "자연어처리는 3학점 과목으로 박민수 교수가 담당한다. 텍스트 분석과 언어 모델을 다룬다.",
-            "컴퓨터비전은 3학점 과목으로 이영희, 정수진 교수가 공동 담당한다. 이미지 인식과 객체 탐지를 다룬다.",
-            "강화학습은 3학점 과목으로 김철수 교수가 담당한다. MDP, Q-Learning, PPO를 다룬다.",
-            "AI융합프로젝트에는 김철수, 이영희 교수가 참여한다. NLP연구프로젝트에는 박민수 교수가 참여한다.",
-        ]
+
+        data    = generate_university_data(seed=42)
+        docs    = []
+
+        # ── 교수 소개 문서 (교수 1명당 1건) ─────────────────────────
+        for prof in data["professors"]:
+            courses_str = ", ".join(prof["courses"]) if prof["courses"] else "없음"
+            collab_str  = ", ".join(prof["collab"])  if prof["collab"]  else "없음"
+            docs.append(
+                f"{prof['name']} 교수는 {prof['age']}세이며 {prof['dept']} 소속이다. "
+                f"담당 과목: {courses_str}. "
+                f"연구 분야: {prof['research']}. "
+                f"협력 교수: {collab_str}."
+            )
+
+        # ── 학과 안내 문서 (학과 1개당 1건) ─────────────────────────
+        for dept in data["depts"]:
+            prof_names   = data["dept_profs"].get(dept, [])
+            course_names = data["dept_courses"].get(dept, [])
+            docs.append(
+                f"{dept} 소속 교수는 총 {len(prof_names)}명이며, "
+                f"개설 과목 수는 {len(course_names)}개다. "
+                f"교수 목록: {', '.join(prof_names[:5])}{'...' if len(prof_names) > 5 else ''}. "
+                f"대표 과목: {', '.join(course_names[:5])}{'...' if len(course_names) > 5 else ''}."
+            )
+
+        # ── 프로젝트 문서 (프로젝트 1개당 1건) ──────────────────────
+        for pname, pprofs in data["projects"].items():
+            docs.append(
+                f"{pname} 프로젝트에는 {', '.join(pprofs)}가 참여한다. "
+                f"총 {len(pprofs)}명의 교수가 참여하는 연구 과제다."
+            )
+
         self.add_documents(docs)
+        print(f"Vector 문서: {len(docs)}건 로드 완료 "
+              f"(교수 {len(data['professors'])}건 + "
+              f"학과 {len(data['depts'])}건 + "
+              f"프로젝트 {len(data['projects'])}건)")
 
     def build(self):
         """벡터 인덱스 구축"""
