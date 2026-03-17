@@ -1,0 +1,7002 @@
+[
+  {
+    "id": 1,
+    "query": "정보보안학과 소속 정교수은 누구인가?",
+    "answer": "조성환",
+    "reference": "정보보안학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 2,
+    "query": "전자공학과 소속 42세 미만 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 3,
+    "query": "오지은 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "오지은 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 4,
+    "query": "류성민 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "류성민 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 5,
+    "query": "최준혁 교수의 나이는?",
+    "answer": "41세",
+    "reference": "최준혁 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 6,
+    "query": "임태양 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "홍석진, 전혜린",
+    "reference": "임태양 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 7,
+    "query": "강현도 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은, 남기훈",
+    "reference": "강현도 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 8,
+    "query": "오지은 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "지식그래프, AI윤리",
+    "reference": "오지은 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 9,
+    "query": "수학과 소속 42세 초과 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 10,
+    "query": "박태준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "박태준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 11,
+    "query": "정기범 교수의 이메일 주소는?",
+    "answer": "jungkb@univ.ac.kr",
+    "reference": "정기범 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 12,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 13,
+    "query": "통계학과 소속 35세 이상 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (35세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 14,
+    "query": "NLP연구센터 프로젝트에 참여하는 교수는?",
+    "answer": "박민수, 김철수, 남기훈",
+    "reference": "NLP연구센터 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 15,
+    "query": "컴퓨터공학과 소속 조교수은 누구인가?",
+    "answer": "한상우, 윤지현",
+    "reference": "컴퓨터공학과 + 직급=조교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 16,
+    "query": "윤지현 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "윤지현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 17,
+    "query": "전자공학과 소속 52세 초과 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (52세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 18,
+    "query": "정기범 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "정기범 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 19,
+    "query": "전혜린 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "전혜린 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 20,
+    "query": "하윤석 교수가 담당하는 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "하윤석 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 21,
+    "query": "한상우 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "한상우 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 22,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 23,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 24,
+    "query": "정보보안학과 소속 35세 이상 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (35세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 25,
+    "query": "하윤석 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터마이닝, 통계적학습, 머신러닝기초",
+    "reference": "하윤석 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 26,
+    "query": "정보보안학과 소속 40세 이하 교수는?",
+    "answer": "김보람",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 27,
+    "query": "컴퓨터공학과 소속 42세 이상 교수는?",
+    "answer": "김철수, 박민수, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 28,
+    "query": "신동현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 홍석진, 문지혜",
+    "reference": "신동현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 29,
+    "query": "박태준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박태준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 30,
+    "query": "전자공학과 소속 52세 이상 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (52세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 31,
+    "query": "정수진 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "정수진 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 32,
+    "query": "자연어이해 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "자연어이해 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 33,
+    "query": "의료AI연구단 프로젝트에 참여하는 교수는?",
+    "answer": "서민준, 오지은, 송나연",
+    "reference": "의료AI연구단 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 34,
+    "query": "통계학과에 소속된 교수는 누구인가?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 35,
+    "query": "노현아 교수가 담당하는 과목은?",
+    "answer": "확률론, 수치해석",
+    "reference": "노현아 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 36,
+    "query": "홍석진 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "홍석진 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 37,
+    "query": "박태준 교수의 소속 학과는?",
+    "answer": "전자공학과",
+    "reference": "박태준 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 38,
+    "query": "수학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "수학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 39,
+    "query": "전자공학과 소속 48세 초과 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (48세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 40,
+    "query": "오지은 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 남기훈",
+    "reference": "오지은 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 41,
+    "query": "시계열분석 과목을 담당하는 교수는?",
+    "answer": "신동현",
+    "reference": "시계열분석 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 42,
+    "query": "소프트웨어공학 과목을 담당하는 교수는?",
+    "answer": "장미래",
+    "reference": "소프트웨어공학 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 43,
+    "query": "한상우 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "한상우 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 44,
+    "query": "소프트웨어학과에 소속된 교수는 누구인가?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 45,
+    "query": "클라우드인프라 프로젝트에 참여하는 교수는?",
+    "answer": "한상우, 류성민, 임태양",
+    "reference": "클라우드인프라 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 46,
+    "query": "전체 교수 중 48세 미만인 사람은?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 이영희, 정수진, 강현도, 서민준, 오지은, 장미래, 권오준, 백승현, 류성민, 전혜린, 신동현, 문지혜, 조성환, 김보람, 이재원, 손민아, 안준호, 노현아, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 47,
+    "query": "김보람 교수의 소속 학과는?",
+    "answer": "정보보안학과",
+    "reference": "김보람 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 48,
+    "query": "로봇공학 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "로봇공학 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 49,
+    "query": "정기범 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "정기범 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 50,
+    "query": "김철수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김철수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 51,
+    "query": "조성환 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "블록체인",
+    "reference": "조성환 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 52,
+    "query": "이영희 교수의 연구 분야는?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "이영희 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 53,
+    "query": "김철수 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "지식그래프, AI윤리",
+    "reference": "김철수 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 54,
+    "query": "문지혜 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 노현아",
+    "reference": "문지혜 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 55,
+    "query": "소프트웨어학과 소속 38세 이하 교수는?",
+    "answer": "백승현",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (38세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 56,
+    "query": "데이터사이언스학과 소속 정교수은 누구인가?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 57,
+    "query": "박민수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박민수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 58,
+    "query": "남기훈 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "설명가능AI, 멀티모달AI, AI윤리",
+    "reference": "남기훈 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 59,
+    "query": "박태준 교수의 소속 학과는?",
+    "answer": "전자공학과",
+    "reference": "박태준 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 60,
+    "query": "최준혁 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "자연어처리, 자연어이해",
+    "reference": "최준혁 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 61,
+    "query": "김철수 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박민수, 남기훈",
+    "reference": "김철수 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 62,
+    "query": "강현도 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "컴퓨터비전",
+    "reference": "강현도 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 63,
+    "query": "임태양 교수의 연구 분야는?",
+    "answer": "데이터베이스, 빅데이터",
+    "reference": "임태양 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 64,
+    "query": "박민수 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "박민수 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 65,
+    "query": "송나연 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "송나연 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 66,
+    "query": "신동현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 홍석진, 문지혜",
+    "reference": "신동현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 67,
+    "query": "소프트웨어학과에 소속된 교수는 누구인가?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 68,
+    "query": "류성민 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "류성민 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 69,
+    "query": "정수진 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "정수진 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 70,
+    "query": "강현도 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "강현도 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 71,
+    "query": "컴퓨터공학과에 소속된 교수는 누구인가?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 72,
+    "query": "박태준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "박태준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 73,
+    "query": "이영희 교수가 담당하는 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "이영희 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 74,
+    "query": "안준호 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "안준호 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 75,
+    "query": "송나연 교수의 이메일 주소는?",
+    "answer": "songny@univ.ac.kr",
+    "reference": "송나연 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 76,
+    "query": "확률론 과목은 어느 학과에서 개설하는가?",
+    "answer": "수학과",
+    "reference": "확률론 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 77,
+    "query": "네트워크보안 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "네트워크보안 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 78,
+    "query": "문지혜 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "시계열분석",
+    "reference": "문지혜 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 79,
+    "query": "정기범 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박태준, 조성환",
+    "reference": "정기범 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 80,
+    "query": "김보람 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김보람 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 81,
+    "query": "김보람 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "김보람 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 82,
+    "query": "남기훈 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "남기훈 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 83,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 84,
+    "query": "컴퓨터공학과 소속 부교수은 누구인가?",
+    "answer": "최준혁",
+    "reference": "컴퓨터공학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 85,
+    "query": "데이터마이닝 과목을 담당하는 교수는?",
+    "answer": "전혜린",
+    "reference": "데이터마이닝 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 86,
+    "query": "데이터사이언스학과 소속 35세 이하 교수는?",
+    "answer": "신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (35세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 87,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 88,
+    "query": "이영희 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "이영희 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 89,
+    "query": "손민아 교수의 이메일 주소는?",
+    "answer": "sonma@univ.ac.kr",
+    "reference": "손민아 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 90,
+    "query": "네트워크보안 과목은 어느 학과에서 개설하는가?",
+    "answer": "정보보안학과",
+    "reference": "네트워크보안 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 91,
+    "query": "안준호 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "안준호 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 92,
+    "query": "소프트웨어학과 소속 38세 미만 교수는?",
+    "answer": "백승현",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (38세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 93,
+    "query": "소프트웨어학과 소속 42세 이상 교수는?",
+    "answer": "권오준, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 94,
+    "query": "백승현 교수의 나이는?",
+    "answer": "37세",
+    "reference": "백승현 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 95,
+    "query": "선형대수학 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "선형대수학 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 96,
+    "query": "메타버스연구소 프로젝트에 참여하는 교수는?",
+    "answer": "백승현, 서민준, 문지혜",
+    "reference": "메타버스연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 97,
+    "query": "류성민 교수가 담당하는 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "류성민 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 98,
+    "query": "컴퓨터공학과 소속 50세 이상 교수는?",
+    "answer": "박민수",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (50세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 99,
+    "query": "정기범 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "확률론, 수치해석",
+    "reference": "정기범 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 100,
+    "query": "조교수에 해당하는 교수 목록은?",
+    "answer": "한상우, 윤지현, 정수진, 오지은, 백승현, 신동현, 문지혜, 김보람, 안준호",
+    "reference": "직급 = 조교수 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 101,
+    "query": "의료AI연구단 프로젝트에 참여하는 교수는?",
+    "answer": "서민준, 오지은, 송나연",
+    "reference": "의료AI연구단 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 102,
+    "query": "한상우 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "한상우 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 103,
+    "query": "류성민 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 백승현",
+    "reference": "류성민 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 104,
+    "query": "메타버스연구소 프로젝트의 연구 분야는?",
+    "answer": "Metaverse",
+    "reference": "메타버스연구소 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 105,
+    "query": "정기범 교수의 이메일 주소는?",
+    "answer": "jungkb@univ.ac.kr",
+    "reference": "정기범 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 106,
+    "query": "윤지현 교수의 이메일 주소는?",
+    "answer": "yoonjh@univ.ac.kr",
+    "reference": "윤지현 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 107,
+    "query": "송나연 교수의 나이는?",
+    "answer": "39세",
+    "reference": "송나연 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 108,
+    "query": "인공지능학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "인공지능학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 109,
+    "query": "소프트웨어학과 소속 부교수은 누구인가?",
+    "answer": "장미래, 류성민",
+    "reference": "소프트웨어학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 110,
+    "query": "박태준 교수의 나이는?",
+    "answer": "53세",
+    "reference": "박태준 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 111,
+    "query": "하윤석 교수가 담당하는 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "하윤석 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 112,
+    "query": "수학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "수학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 113,
+    "query": "신동현 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터시각화",
+    "reference": "신동현 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 114,
+    "query": "컴퓨터공학과 소속 40세 이상 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 115,
+    "query": "NLP연구센터 프로젝트에 참여하는 교수는?",
+    "answer": "박민수, 김철수, 남기훈",
+    "reference": "NLP연구센터 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 116,
+    "query": "권오준 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "권오준 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 117,
+    "query": "데이터사이언스학과 소속 42세 이하 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 118,
+    "query": "그린AI연구소 프로젝트에 참여하는 교수는?",
+    "answer": "오지은, 노현아, 문지혜",
+    "reference": "그린AI연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 119,
+    "query": "류성민 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "한상우, 임태양",
+    "reference": "류성민 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 120,
+    "query": "모바일프로그래밍 과목을 담당하는 교수는?",
+    "answer": "백승현",
+    "reference": "모바일프로그래밍 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 121,
+    "query": "인공지능학과 소속 52세 미만 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 122,
+    "query": "김보람 교수의 연구 분야는?",
+    "answer": "사이버포렌식, 취약점분석",
+    "reference": "김보람 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 123,
+    "query": "설명가능AI 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "설명가능AI 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 124,
+    "query": "김철수 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박민수, 남기훈",
+    "reference": "김철수 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 125,
+    "query": "데이터사이언스학과 소속 40세 미만 교수는?",
+    "answer": "신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 126,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 127,
+    "query": "서민준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "서민준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 128,
+    "query": "빅데이터처리 과목을 담당하는 교수는?",
+    "answer": "홍석진",
+    "reference": "빅데이터처리 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 129,
+    "query": "김보람 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 130,
+    "query": "하윤석 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "송나연",
+    "reference": "하윤석 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 131,
+    "query": "컴퓨터공학과 소속 50세 이하 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 132,
+    "query": "강현도 교수가 담당하는 과목은?",
+    "answer": "강화학습, 로봇공학",
+    "reference": "강현도 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 133,
+    "query": "VLSI설계 과목은 어느 학과에서 개설하는가?",
+    "answer": "전자공학과",
+    "reference": "VLSI설계 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 134,
+    "query": "수학과 소속 45세 이상 교수는?",
+    "answer": "정기범",
+    "reference": "수학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 135,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 136,
+    "query": "데이터베이스 과목을 담당하는 교수는?",
+    "answer": "임태양",
+    "reference": "데이터베이스 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 137,
+    "query": "안준호 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "신호처리",
+    "reference": "안준호 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 138,
+    "query": "정기범 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "확률론, 수치해석",
+    "reference": "정기범 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 139,
+    "query": "임태양 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "임태양 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 140,
+    "query": "통계학과 소속 42세 이하 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 141,
+    "query": "하윤석 교수가 담당하는 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "하윤석 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 142,
+    "query": "전자공학과 소속 38세 초과 교수는?",
+    "answer": "박태준, 손민아",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 143,
+    "query": "강현도 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "강현도 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 144,
+    "query": "전혜린 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "전혜린 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 145,
+    "query": "서민준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "서민준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 146,
+    "query": "류성민 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "류성민 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 147,
+    "query": "송나연 교수의 연구 분야는?",
+    "answer": "생존분석, 임상통계",
+    "reference": "송나연 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 148,
+    "query": "임태양 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "빅데이터처리",
+    "reference": "임태양 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 149,
+    "query": "소프트웨어학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "소프트웨어학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 150,
+    "query": "수치해석 과목을 담당하는 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수치해석 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 151,
+    "query": "임태양 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현",
+    "reference": "임태양 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 152,
+    "query": "노현아 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "정기범",
+    "reference": "노현아 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 153,
+    "query": "안준호 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "안준호 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 154,
+    "query": "모바일프로그래밍 과목을 담당하는 교수는?",
+    "answer": "백승현",
+    "reference": "모바일프로그래밍 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 155,
+    "query": "컴퓨터공학과 소속 35세 초과 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 156,
+    "query": "이재원 교수의 소속 학과는?",
+    "answer": "정보보안학과",
+    "reference": "이재원 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 157,
+    "query": "박민수 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "박민수 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 158,
+    "query": "윤지현 교수의 연구 분야는?",
+    "answer": "임베디드시스템, IoT",
+    "reference": "윤지현 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 159,
+    "query": "신동현 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터시각화",
+    "reference": "신동현 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 160,
+    "query": "박민수 교수의 이메일 주소는?",
+    "answer": "parkms@univ.ac.kr",
+    "reference": "박민수 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 161,
+    "query": "손민아 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 안준호",
+    "reference": "손민아 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 162,
+    "query": "정보보안학과 소속 52세 이하 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 163,
+    "query": "운영체제 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "운영체제 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 164,
+    "query": "박태준 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "박태준 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 165,
+    "query": "강현도 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "강현도 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 166,
+    "query": "인공지능학과 소속 35세 이상 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (35세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 167,
+    "query": "김철수 교수의 나이는?",
+    "answer": "45세",
+    "reference": "김철수 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 168,
+    "query": "통계학과 소속 48세 이상 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 169,
+    "query": "데이터사이언스학과 소속 42세 초과 교수는?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 170,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 171,
+    "query": "서민준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "서민준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 172,
+    "query": "신동현 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "신동현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 173,
+    "query": "정수진 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이영희, 강현도",
+    "reference": "정수진 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 174,
+    "query": "김보람 교수의 나이는?",
+    "answer": "36세",
+    "reference": "김보람 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 175,
+    "query": "노현아 교수의 나이는?",
+    "answer": "44세",
+    "reference": "노현아 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 176,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 177,
+    "query": "최준혁 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "최준혁 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 178,
+    "query": "장미래 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "장미래 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 179,
+    "query": "남기훈 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "남기훈 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 180,
+    "query": "남기훈 교수의 이메일 주소는?",
+    "answer": "namkh@univ.ac.kr",
+    "reference": "남기훈 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 181,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 182,
+    "query": "박태준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박태준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 183,
+    "query": "남기훈 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "남기훈 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 184,
+    "query": "손민아 교수가 담당하는 과목은?",
+    "answer": "신호처리",
+    "reference": "손민아 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 185,
+    "query": "신호처리 과목은 어느 학과에서 개설하는가?",
+    "answer": "전자공학과",
+    "reference": "신호처리 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 186,
+    "query": "박민수 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "박민수 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 187,
+    "query": "강현도 교수가 담당하는 과목은?",
+    "answer": "강화학습, 로봇공학",
+    "reference": "강현도 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 188,
+    "query": "전체 교수 중 48세 이상인 사람은?",
+    "answer": "박민수, 임태양, 남기훈, 홍석진, 박태준, 정기범, 하윤석",
+    "reference": "전체 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 189,
+    "query": "컴퓨터공학과 소속 42세 이하 교수는?",
+    "answer": "최준혁, 한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 190,
+    "query": "박민수 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "인공지능개론, 딥러닝, 강화학습, 자연어이해, 머신러닝기초",
+    "reference": "박민수 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 191,
+    "query": "서민준 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 송나연",
+    "reference": "서민준 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 192,
+    "query": "수학과 소속 52세 미만 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 193,
+    "query": "안준호 교수의 이메일 주소는?",
+    "answer": "anjh@univ.ac.kr",
+    "reference": "안준호 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 194,
+    "query": "정기범 교수의 연구 분야는?",
+    "answer": "최적화이론, 볼록최적화",
+    "reference": "정기범 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 195,
+    "query": "데이터사이언스학과 소속 52세 미만 교수는?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 196,
+    "query": "서민준 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 송나연",
+    "reference": "서민준 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 197,
+    "query": "권오준 교수의 연구 분야는?",
+    "answer": "프로그래밍언어, 컴파일러",
+    "reference": "권오준 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 198,
+    "query": "노현아 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "최적화이론, 수치해석, 선형대수학",
+    "reference": "노현아 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 199,
+    "query": "인공지능학과 소속 35세 미만 교수는?",
+    "answer": "오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (35세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 200,
+    "query": "이영희 교수의 연구 분야는?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "이영희 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 201,
+    "query": "서민준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 오지은, 남기훈",
+    "reference": "서민준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 202,
+    "query": "정기범 교수의 소속 학과는?",
+    "answer": "수학과",
+    "reference": "정기범 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 203,
+    "query": "베이지안통계 과목을 담당하는 교수는?",
+    "answer": "하윤석",
+    "reference": "베이지안통계 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 204,
+    "query": "전자공학과 소속 정교수은 누구인가?",
+    "answer": "박태준",
+    "reference": "전자공학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 205,
+    "query": "윤지현 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "윤지현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 206,
+    "query": "데이터사이언스학과 소속 50세 미만 교수는?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 207,
+    "query": "류성민 교수의 이메일 주소는?",
+    "answer": "ryusm@univ.ac.kr",
+    "reference": "류성민 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 208,
+    "query": "김보람 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 209,
+    "query": "데이터사이언스학과 소속 48세 미만 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 210,
+    "query": "정보보안학과 소속 38세 이하 교수는?",
+    "answer": "김보람",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (38세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 211,
+    "query": "노현아 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "정기범",
+    "reference": "노현아 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 212,
+    "query": "안준호 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "안준호 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 213,
+    "query": "한상우 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "한상우 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 214,
+    "query": "사이버보안센터 프로젝트의 연구 분야는?",
+    "answer": "Cybersecurity",
+    "reference": "사이버보안센터 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 215,
+    "query": "최준혁 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "자연어처리, 자연어이해",
+    "reference": "최준혁 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 216,
+    "query": "남기훈 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "남기훈 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 217,
+    "query": "메타버스연구소 프로젝트에 참여하는 교수는?",
+    "answer": "백승현, 서민준, 문지혜",
+    "reference": "메타버스연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 218,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 219,
+    "query": "수학과 소속 40세 이상 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 220,
+    "query": "송나연 교수의 나이는?",
+    "answer": "39세",
+    "reference": "송나연 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 221,
+    "query": "통계적학습 과목을 담당하는 교수는?",
+    "answer": "전혜린, 하윤석",
+    "reference": "통계적학습 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 222,
+    "query": "남기훈 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "설명가능AI, 멀티모달AI, AI윤리",
+    "reference": "남기훈 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 223,
+    "query": "이영희 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "인공지능개론, 딥러닝, 강화학습, 자연어이해, 머신러닝기초",
+    "reference": "이영희 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 224,
+    "query": "클라우드인프라 프로젝트에 참여하는 교수는?",
+    "answer": "한상우, 류성민, 임태양",
+    "reference": "클라우드인프라 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 225,
+    "query": "인공지능학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "인공지능학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 226,
+    "query": "서민준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 오지은, 남기훈",
+    "reference": "서민준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 227,
+    "query": "소프트웨어학과 소속 40세 초과 교수는?",
+    "answer": "권오준, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 228,
+    "query": "데이터마이닝 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "데이터마이닝 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 229,
+    "query": "송나연 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "송나연 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 230,
+    "query": "송나연 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "하윤석",
+    "reference": "송나연 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 231,
+    "query": "권오준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "알고리즘, 운영체제",
+    "reference": "권오준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 232,
+    "query": "권오준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 백승현, 류성민",
+    "reference": "권오준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 233,
+    "query": "정보보안학과 소속 42세 미만 교수는?",
+    "answer": "김보람",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 234,
+    "query": "통계적학습 과목은 어느 학과에서 개설하는가?",
+    "answer": "데이터사이언스학과",
+    "reference": "통계적학습 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 235,
+    "query": "운영체제 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "운영체제 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 236,
+    "query": "NLP연구센터 프로젝트에 참여하는 교수는?",
+    "answer": "박민수, 김철수, 남기훈",
+    "reference": "NLP연구센터 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 237,
+    "query": "서민준 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "서민준 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 238,
+    "query": "손민아 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 안준호",
+    "reference": "손민아 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 239,
+    "query": "조성환 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "조성환 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 240,
+    "query": "컴퓨터공학과 소속 48세 이상 교수는?",
+    "answer": "박민수, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 241,
+    "query": "김보람 교수가 담당하는 과목은?",
+    "answer": "네트워크보안",
+    "reference": "김보람 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 242,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 243,
+    "query": "지식그래프 과목을 담당하는 교수는?",
+    "answer": "남기훈",
+    "reference": "지식그래프 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 244,
+    "query": "강현도 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은, 남기훈",
+    "reference": "강현도 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 245,
+    "query": "노현아 교수의 이메일 주소는?",
+    "answer": "noha@univ.ac.kr",
+    "reference": "노현아 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 246,
+    "query": "컴퓨터공학과에 소속된 교수는 누구인가?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 247,
+    "query": "노현아 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "정기범",
+    "reference": "노현아 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 248,
+    "query": "김보람 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "김보람 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 249,
+    "query": "소프트웨어학과 소속 45세 이상 교수는?",
+    "answer": "권오준",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 250,
+    "query": "데이터사이언스학과 소속 40세 이상 교수는?",
+    "answer": "전혜린, 홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 251,
+    "query": "전자공학과 소속 부교수은 누구인가?",
+    "answer": "손민아",
+    "reference": "전자공학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 252,
+    "query": "인공지능학과에 소속된 교수는 누구인가?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 253,
+    "query": "알고리즘 과목을 담당하는 교수는?",
+    "answer": "최준혁",
+    "reference": "알고리즘 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 254,
+    "query": "정기범 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "확률론, 수치해석",
+    "reference": "정기범 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 255,
+    "query": "전자공학과에 소속된 교수는 누구인가?",
+    "answer": "박태준, 손민아, 안준호",
+    "reference": "전자공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 256,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 257,
+    "query": "강현도 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "강현도 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 258,
+    "query": "손민아 교수의 소속 학과는?",
+    "answer": "전자공학과",
+    "reference": "손민아 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 259,
+    "query": "VLSI설계 과목은 어느 학과에서 개설하는가?",
+    "answer": "전자공학과",
+    "reference": "VLSI설계 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 260,
+    "query": "양자컴퓨팅연구 프로젝트의 연구 분야는?",
+    "answer": "Quantum",
+    "reference": "양자컴퓨팅연구 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 261,
+    "query": "컴퓨터공학과 소속 40세 이하 교수는?",
+    "answer": "한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 262,
+    "query": "최적화이론 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "최적화이론 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 263,
+    "query": "박태준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박태준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 264,
+    "query": "장미래 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "권오준, 백승현, 류성민",
+    "reference": "장미래 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 265,
+    "query": "하윤석 교수의 나이는?",
+    "answer": "48세",
+    "reference": "하윤석 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 266,
+    "query": "박태준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "박태준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 267,
+    "query": "전자공학과 소속 45세 미만 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 268,
+    "query": "정보보안학과 소속 40세 미만 교수는?",
+    "answer": "김보람",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 269,
+    "query": "통계학과 소속 42세 초과 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 270,
+    "query": "지식그래프플랫폼 프로젝트의 연구 분야는?",
+    "answer": "KG",
+    "reference": "지식그래프플랫폼 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 271,
+    "query": "박민수 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "박민수 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 272,
+    "query": "전자공학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "전자공학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 273,
+    "query": "남기훈 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "설명가능AI, 멀티모달AI, AI윤리",
+    "reference": "남기훈 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 274,
+    "query": "조성환 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "조성환 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 275,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 276,
+    "query": "컴퓨터네트워크 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "컴퓨터네트워크 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 277,
+    "query": "박민수 교수의 연구 분야는?",
+    "answer": "자연어처리, 정보검색",
+    "reference": "박민수 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 278,
+    "query": "전체 교수 중 45세 이하인 사람은?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 이영희, 정수진, 강현도, 서민준, 오지은, 장미래, 백승현, 류성민, 전혜린, 신동현, 문지혜, 김보람, 이재원, 손민아, 안준호, 노현아, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 279,
+    "query": "전체 교수 중 42세 이하인 사람은?",
+    "answer": "최준혁, 한상우, 윤지현, 이영희, 정수진, 서민준, 오지은, 장미래, 백승현, 전혜린, 신동현, 문지혜, 김보람, 이재원, 손민아, 안준호, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 280,
+    "query": "장미래 교수의 소속 학과는?",
+    "answer": "소프트웨어학과",
+    "reference": "장미래 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 281,
+    "query": "강현도 교수의 이메일 주소는?",
+    "answer": "kanghd@univ.ac.kr",
+    "reference": "강현도 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 282,
+    "query": "권오준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 백승현, 류성민",
+    "reference": "권오준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 283,
+    "query": "지식그래프 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "지식그래프 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 284,
+    "query": "하윤석 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "전혜린, 송나연",
+    "reference": "하윤석 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 285,
+    "query": "AI융합연구소 프로젝트에 참여하는 교수는?",
+    "answer": "김철수, 이영희, 강현도",
+    "reference": "AI융합연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 286,
+    "query": "노현아 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "노현아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 287,
+    "query": "한상우 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "안준호, 손민아",
+    "reference": "한상우 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 288,
+    "query": "정보보안학과 소속 45세 미만 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 289,
+    "query": "통계학과 소속 45세 이하 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 290,
+    "query": "소프트웨어학과 소속 35세 이상 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (35세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 291,
+    "query": "그린AI연구소 프로젝트에 참여하는 교수는?",
+    "answer": "오지은, 노현아, 문지혜",
+    "reference": "그린AI연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 292,
+    "query": "정기범 교수의 이메일 주소는?",
+    "answer": "jungkb@univ.ac.kr",
+    "reference": "정기범 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 293,
+    "query": "전체 교수 중 52세 이하인 사람은?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양, 이영희, 정수진, 강현도, 서민준, 오지은, 남기훈, 장미래, 권오준, 백승현, 류성민, 전혜린, 신동현, 홍석진, 문지혜, 조성환, 김보람, 이재원, 손민아, 안준호, 정기범, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 294,
+    "query": "장미래 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "장미래 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 295,
+    "query": "안준호 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "안준호 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 296,
+    "query": "전체 교수 중 48세 초과인 사람은?",
+    "answer": "박민수, 남기훈, 홍석진, 박태준, 정기범",
+    "reference": "전체 교수 나이 조건 필터 (48세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 297,
+    "query": "인공지능학과 소속 정교수은 누구인가?",
+    "answer": "강현도, 남기훈",
+    "reference": "인공지능학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 298,
+    "query": "인공지능학과 소속 45세 이하 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 299,
+    "query": "오지은 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 남기훈",
+    "reference": "오지은 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 300,
+    "query": "전혜린 교수의 이메일 주소는?",
+    "answer": "jeonhr@univ.ac.kr",
+    "reference": "전혜린 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 301,
+    "query": "오지은 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "지식그래프, AI윤리",
+    "reference": "오지은 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 302,
+    "query": "안준호 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박태준, 손민아",
+    "reference": "안준호 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 303,
+    "query": "전자공학과 소속 45세 이하 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 304,
+    "query": "컴퓨터공학과 소속 45세 이하 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 305,
+    "query": "김보람 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 306,
+    "query": "컴퓨터공학과에 소속된 교수는 누구인가?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 307,
+    "query": "수치해석 과목은 어느 학과에서 개설하는가?",
+    "answer": "수학과",
+    "reference": "수치해석 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 308,
+    "query": "인공지능학과 소속 45세 이상 교수는?",
+    "answer": "남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 309,
+    "query": "전자공학과 소속 48세 이상 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 310,
+    "query": "안준호 교수의 이메일 주소는?",
+    "answer": "anjh@univ.ac.kr",
+    "reference": "안준호 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 311,
+    "query": "소프트웨어학과 소속 42세 이하 교수는?",
+    "answer": "장미래, 백승현",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 312,
+    "query": "운영체제 과목을 담당하는 교수는?",
+    "answer": "최준혁",
+    "reference": "운영체제 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 313,
+    "query": "권오준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "알고리즘, 운영체제",
+    "reference": "권오준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 314,
+    "query": "신동현 교수의 나이는?",
+    "answer": "35세",
+    "reference": "신동현 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 315,
+    "query": "전체 교수 중 40세 미만인 사람은?",
+    "answer": "한상우, 윤지현, 이영희, 정수진, 오지은, 장미래, 백승현, 신동현, 문지혜, 김보람, 안준호, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 316,
+    "query": "통계학과 소속 50세 이하 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 317,
+    "query": "데이터사이언스학과 소속 45세 이하 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 318,
+    "query": "박민수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박민수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 319,
+    "query": "김철수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김철수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 320,
+    "query": "서민준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "서민준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 321,
+    "query": "장미래 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "장미래 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 322,
+    "query": "이영희 교수의 이메일 주소는?",
+    "answer": "leeyh@univ.ac.kr",
+    "reference": "이영희 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 323,
+    "query": "한상우 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "안준호, 손민아",
+    "reference": "한상우 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 324,
+    "query": "장미래 교수의 소속 학과는?",
+    "answer": "소프트웨어학과",
+    "reference": "장미래 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 325,
+    "query": "VLSI설계 과목을 담당하는 교수는?",
+    "answer": "박태준",
+    "reference": "VLSI설계 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 326,
+    "query": "강현도 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은, 남기훈",
+    "reference": "강현도 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 327,
+    "query": "장미래 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "장미래 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 328,
+    "query": "손민아 교수의 연구 분야는?",
+    "answer": "신호처리, 통신시스템",
+    "reference": "손민아 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 329,
+    "query": "지식그래프플랫폼 프로젝트의 연구 분야는?",
+    "answer": "KG",
+    "reference": "지식그래프플랫폼 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 330,
+    "query": "그린AI연구소 프로젝트에 참여하는 교수는?",
+    "answer": "오지은, 노현아, 문지혜",
+    "reference": "그린AI연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 331,
+    "query": "백승현 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "백승현 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 332,
+    "query": "최준혁 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "자연어처리, 자연어이해",
+    "reference": "최준혁 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 333,
+    "query": "이영희 교수의 직급은?",
+    "answer": "부교수",
+    "reference": "이영희 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 334,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 335,
+    "query": "손민아 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "임베디드시스템",
+    "reference": "손민아 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 336,
+    "query": "하윤석 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터마이닝, 통계적학습, 머신러닝기초",
+    "reference": "하윤석 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 337,
+    "query": "데이터사이언스학과 소속 40세 초과 교수는?",
+    "answer": "전혜린, 홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 338,
+    "query": "소프트웨어공학 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "소프트웨어공학 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 339,
+    "query": "전혜린 교수의 연구 분야는?",
+    "answer": "데이터마이닝, 패턴인식",
+    "reference": "전혜린 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 340,
+    "query": "한상우 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "한상우 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 341,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 342,
+    "query": "정수진 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "정수진 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 343,
+    "query": "권오준 교수의 나이는?",
+    "answer": "46세",
+    "reference": "권오준 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 344,
+    "query": "문지혜 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "시계열분석",
+    "reference": "문지혜 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 345,
+    "query": "소프트웨어학과 소속 45세 미만 교수는?",
+    "answer": "장미래, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 346,
+    "query": "전혜린 교수의 소속 학과는?",
+    "answer": "데이터사이언스학과",
+    "reference": "전혜린 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 347,
+    "query": "정보보안학과 소속 38세 이상 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 348,
+    "query": "정보보안학과 소속 48세 이하 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 349,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 350,
+    "query": "홍석진 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터베이스",
+    "reference": "홍석진 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 351,
+    "query": "류성민 교수의 이메일 주소는?",
+    "answer": "ryusm@univ.ac.kr",
+    "reference": "류성민 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 352,
+    "query": "전혜린 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "임태양, 홍석진",
+    "reference": "전혜린 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 353,
+    "query": "인공지능학과 소속 부교수은 누구인가?",
+    "answer": "이영희, 서민준",
+    "reference": "인공지능학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 354,
+    "query": "그린AI연구소 프로젝트의 연구 분야는?",
+    "answer": "GreenAI",
+    "reference": "그린AI연구소 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 355,
+    "query": "컴퓨터공학과에 소속된 교수는 누구인가?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 356,
+    "query": "류성민 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "류성민 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 357,
+    "query": "이영희 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "이영희 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 358,
+    "query": "자연어이해 과목을 담당하는 교수는?",
+    "answer": "김철수, 박민수",
+    "reference": "자연어이해 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 359,
+    "query": "임태양 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "홍석진, 전혜린",
+    "reference": "임태양 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 360,
+    "query": "정수진 교수의 이메일 주소는?",
+    "answer": "jungsj@univ.ac.kr",
+    "reference": "정수진 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 361,
+    "query": "데이터사이언스학과에 소속된 교수는 누구인가?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 362,
+    "query": "전혜린 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "임태양, 홍석진",
+    "reference": "전혜린 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 363,
+    "query": "지식그래프플랫폼 프로젝트의 연구 분야는?",
+    "answer": "KG",
+    "reference": "지식그래프플랫폼 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 364,
+    "query": "수학과 소속 42세 이상 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 365,
+    "query": "장미래 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "장미래 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 366,
+    "query": "알고리즘 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "알고리즘 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 367,
+    "query": "인공지능학과 소속 42세 미만 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 368,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 369,
+    "query": "한상우 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 윤지현, 임태양",
+    "reference": "한상우 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 370,
+    "query": "강현도 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "컴퓨터비전",
+    "reference": "강현도 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 371,
+    "query": "임베디드시스템 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "임베디드시스템 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 372,
+    "query": "그린AI연구소 프로젝트의 연구 분야는?",
+    "answer": "GreenAI",
+    "reference": "그린AI연구소 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 373,
+    "query": "인공지능학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "인공지능학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 374,
+    "query": "송나연 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "송나연 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 375,
+    "query": "하윤석 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터마이닝, 통계적학습, 머신러닝기초",
+    "reference": "하윤석 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 376,
+    "query": "전체 교수 중 50세 이상인 사람은?",
+    "answer": "박민수, 남기훈, 박태준, 정기범",
+    "reference": "전체 교수 나이 조건 필터 (50세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 377,
+    "query": "수학과 소속 35세 초과 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 378,
+    "query": "홍석진 교수의 소속 학과는?",
+    "answer": "데이터사이언스학과",
+    "reference": "홍석진 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 379,
+    "query": "수학과 소속 45세 초과 교수는?",
+    "answer": "정기범",
+    "reference": "수학과 소속 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 380,
+    "query": "노현아 교수의 소속 학과는?",
+    "answer": "수학과",
+    "reference": "노현아 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 381,
+    "query": "장미래 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "장미래 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 382,
+    "query": "이영희 교수의 나이는?",
+    "answer": "38세",
+    "reference": "이영희 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 383,
+    "query": "남기훈 교수의 연구 분야는?",
+    "answer": "지식그래프, 온톨로지",
+    "reference": "남기훈 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 384,
+    "query": "정보보안학과에 소속된 교수는 누구인가?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 385,
+    "query": "자율주행AI프로젝트 프로젝트의 연구 분야는?",
+    "answer": "Vision/RL",
+    "reference": "자율주행AI프로젝트 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 386,
+    "query": "생성모델 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "생성모델 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 387,
+    "query": "소프트웨어공학 과목은 어느 학과에서 개설하는가?",
+    "answer": "소프트웨어학과",
+    "reference": "소프트웨어공학 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 388,
+    "query": "빅데이터플랫폼 프로젝트에 참여하는 교수는?",
+    "answer": "임태양, 홍석진, 전혜린",
+    "reference": "빅데이터플랫폼 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 389,
+    "query": "선형대수학 과목은 어느 학과에서 개설하는가?",
+    "answer": "수학과",
+    "reference": "선형대수학 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 390,
+    "query": "통계적학습 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "통계적학습 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 391,
+    "query": "문지혜 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 신동현, 홍석진",
+    "reference": "문지혜 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 392,
+    "query": "손민아 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "손민아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 393,
+    "query": "클라우드컴퓨팅 과목을 담당하는 교수는?",
+    "answer": "한상우, 류성민",
+    "reference": "클라우드컴퓨팅 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 394,
+    "query": "소프트웨어학과 소속 48세 이하 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 395,
+    "query": "문지혜 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "문지혜 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 396,
+    "query": "컴퓨터공학과 소속 52세 이상 교수는?",
+    "answer": "박민수",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (52세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 397,
+    "query": "블록체인보안연구 프로젝트에 참여하는 교수는?",
+    "answer": "조성환, 이재원, 김보람",
+    "reference": "블록체인보안연구 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 398,
+    "query": "김보람 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김보람 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 399,
+    "query": "강현도 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은, 남기훈",
+    "reference": "강현도 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 400,
+    "query": "조성환 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "조성환 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 401,
+    "query": "네트워크보안 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "네트워크보안 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 402,
+    "query": "임태양 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "임태양 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 403,
+    "query": "한상우 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "한상우 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 404,
+    "query": "소프트웨어학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "소프트웨어학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 405,
+    "query": "정보보안학과 소속 50세 이하 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 406,
+    "query": "최준혁 교수가 담당하는 과목은?",
+    "answer": "알고리즘, 운영체제",
+    "reference": "최준혁 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 407,
+    "query": "전혜린 교수의 이메일 주소는?",
+    "answer": "jeonhr@univ.ac.kr",
+    "reference": "전혜린 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 408,
+    "query": "전체 교수 중 38세 이하인 사람은?",
+    "answer": "한상우, 윤지현, 이영희, 정수진, 오지은, 백승현, 신동현, 문지혜, 김보람, 안준호",
+    "reference": "전체 교수 나이 조건 필터 (38세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 409,
+    "query": "컴퓨터공학과 소속 45세 이상 교수는?",
+    "answer": "김철수, 박민수, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 410,
+    "query": "정보보안학과 소속 42세 이하 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 411,
+    "query": "노현아 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "최적화이론, 수치해석, 선형대수학",
+    "reference": "노현아 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 412,
+    "query": "전자공학과 소속 52세 이하 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 413,
+    "query": "정수진 교수의 연구 분야는?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "정수진 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 414,
+    "query": "김보람 교수가 담당하는 과목은?",
+    "answer": "네트워크보안",
+    "reference": "김보람 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 415,
+    "query": "정수진 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "정수진 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 416,
+    "query": "사이버보안센터 프로젝트의 연구 분야는?",
+    "answer": "Cybersecurity",
+    "reference": "사이버보안센터 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 417,
+    "query": "전체 교수 중 45세 미만인 사람은?",
+    "answer": "최준혁, 한상우, 윤지현, 이영희, 정수진, 강현도, 서민준, 오지은, 장미래, 백승현, 류성민, 전혜린, 신동현, 문지혜, 김보람, 이재원, 손민아, 안준호, 노현아, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 418,
+    "query": "전자공학과 소속 42세 이상 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 419,
+    "query": "수학과 소속 52세 이하 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 420,
+    "query": "송나연 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "전혜린, 하윤석",
+    "reference": "송나연 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 421,
+    "query": "노현아 교수의 소속 학과는?",
+    "answer": "수학과",
+    "reference": "노현아 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 422,
+    "query": "문지혜 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 신동현, 홍석진",
+    "reference": "문지혜 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 423,
+    "query": "베이지안통계 과목을 담당하는 교수는?",
+    "answer": "하윤석",
+    "reference": "베이지안통계 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 424,
+    "query": "인공지능학과 소속 48세 이상 교수는?",
+    "answer": "남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 425,
+    "query": "윤지현 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "윤지현 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 426,
+    "query": "서민준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 오지은, 남기훈",
+    "reference": "서민준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 427,
+    "query": "VLSI설계 과목을 담당하는 교수는?",
+    "answer": "박태준",
+    "reference": "VLSI설계 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 428,
+    "query": "로봇공학 과목을 담당하는 교수는?",
+    "answer": "강현도",
+    "reference": "로봇공학 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 429,
+    "query": "수치해석 과목은 어느 학과에서 개설하는가?",
+    "answer": "수학과",
+    "reference": "수치해석 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 430,
+    "query": "노현아 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "최적화이론, 수치해석, 선형대수학",
+    "reference": "노현아 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 431,
+    "query": "백승현 교수의 연구 분야는?",
+    "answer": "모바일컴퓨팅, UX",
+    "reference": "백승현 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 432,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 433,
+    "query": "데이터베이스 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "데이터베이스 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 434,
+    "query": "머신러닝기초 과목을 담당하는 교수는?",
+    "answer": "김철수, 전혜린, 하윤석",
+    "reference": "머신러닝기초 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 435,
+    "query": "장미래 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "장미래 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 436,
+    "query": "전혜린 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "임태양, 홍석진",
+    "reference": "전혜린 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 437,
+    "query": "안준호 교수의 연구 분야는?",
+    "answer": "임베디드, FPGA",
+    "reference": "안준호 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 438,
+    "query": "컴퓨터공학과 소속 48세 미만 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 439,
+    "query": "메타버스연구소 프로젝트에 참여하는 교수는?",
+    "answer": "백승현, 서민준, 문지혜",
+    "reference": "메타버스연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 440,
+    "query": "인공지능학과 소속 38세 초과 교수는?",
+    "answer": "강현도, 서민준, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 441,
+    "query": "이영희 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "이영희 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 442,
+    "query": "전체 교수 중 45세 초과인 사람은?",
+    "answer": "박민수, 임태양, 남기훈, 권오준, 홍석진, 조성환, 박태준, 정기범, 하윤석",
+    "reference": "전체 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 443,
+    "query": "전체 교수 중 35세 미만인 사람은?",
+    "answer": "오지은, 문지혜",
+    "reference": "전체 교수 나이 조건 필터 (35세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 444,
+    "query": "신동현 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "신동현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 445,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 446,
+    "query": "컴퓨터공학과 소속 38세 미만 교수는?",
+    "answer": "윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (38세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 447,
+    "query": "임태양 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "홍석진, 전혜린",
+    "reference": "임태양 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 448,
+    "query": "홍석진 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터베이스",
+    "reference": "홍석진 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 449,
+    "query": "자율주행AI프로젝트 프로젝트의 연구 분야는?",
+    "answer": "Vision/RL",
+    "reference": "자율주행AI프로젝트 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 450,
+    "query": "통계적학습 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "통계적학습 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 451,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 452,
+    "query": "컴퓨터공학과 소속 38세 초과 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 453,
+    "query": "데이터사이언스학과 소속 35세 미만 교수는?",
+    "answer": "문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (35세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 454,
+    "query": "소프트웨어학과 소속 52세 미만 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 455,
+    "query": "수학과 소속 50세 이하 교수는?",
+    "answer": "노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 456,
+    "query": "김철수 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "김철수 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 457,
+    "query": "로봇공학 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "로봇공학 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 458,
+    "query": "권오준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "권오준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 459,
+    "query": "분산시스템 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "분산시스템 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 460,
+    "query": "통계학과 소속 40세 이하 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 461,
+    "query": "소프트웨어학과 소속 35세 초과 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 462,
+    "query": "인공지능학과에 소속된 교수는 누구인가?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 463,
+    "query": "조성환 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "블록체인",
+    "reference": "조성환 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 464,
+    "query": "하윤석 교수의 소속 학과는?",
+    "answer": "통계학과",
+    "reference": "하윤석 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 465,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 466,
+    "query": "통계학과 소속 52세 미만 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 467,
+    "query": "정보보안학과 소속 40세 초과 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 468,
+    "query": "문지혜 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 노현아",
+    "reference": "문지혜 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 469,
+    "query": "전자공학과 소속 50세 이상 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (50세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 470,
+    "query": "머신러닝기초 과목을 담당하는 교수는?",
+    "answer": "김철수, 전혜린, 하윤석",
+    "reference": "머신러닝기초 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 471,
+    "query": "서민준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "서민준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 472,
+    "query": "하윤석 교수가 담당하는 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "하윤석 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 473,
+    "query": "데이터사이언스학과 소속 38세 이하 교수는?",
+    "answer": "신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (38세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 474,
+    "query": "데이터사이언스학과 소속 38세 이상 교수는?",
+    "answer": "전혜린, 홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 475,
+    "query": "인공지능학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "인공지능학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 476,
+    "query": "김보람 교수의 소속 학과는?",
+    "answer": "정보보안학과",
+    "reference": "김보람 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 477,
+    "query": "박태준 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "박태준 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 478,
+    "query": "강현도 교수의 이메일 주소는?",
+    "answer": "kanghd@univ.ac.kr",
+    "reference": "강현도 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 479,
+    "query": "강현도 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "강현도 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 480,
+    "query": "오지은 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "노현아, 문지혜",
+    "reference": "오지은 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 481,
+    "query": "권오준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "권오준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 482,
+    "query": "최준혁 교수의 나이는?",
+    "answer": "41세",
+    "reference": "최준혁 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 483,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 484,
+    "query": "권오준 교수가 담당하는 과목은?",
+    "answer": "프로그래밍언어론",
+    "reference": "권오준 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 485,
+    "query": "김철수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김철수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 486,
+    "query": "김철수 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "김철수 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 487,
+    "query": "데이터사이언스학과에 소속된 교수는 누구인가?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 488,
+    "query": "문지혜 교수의 소속 학과는?",
+    "answer": "데이터사이언스학과",
+    "reference": "문지혜 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 489,
+    "query": "임태양 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "임태양 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 490,
+    "query": "임태양 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "임태양 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 491,
+    "query": "홍석진 교수가 담당하는 과목은?",
+    "answer": "빅데이터처리",
+    "reference": "홍석진 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 492,
+    "query": "박태준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박태준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 493,
+    "query": "소프트웨어학과 소속 52세 이하 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 494,
+    "query": "오지은 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "노현아, 문지혜",
+    "reference": "오지은 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 495,
+    "query": "안준호 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 손민아",
+    "reference": "안준호 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 496,
+    "query": "통계학과 소속 40세 초과 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 497,
+    "query": "최적화이론 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "최적화이론 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 498,
+    "query": "데이터사이언스학과 소속 45세 이상 교수는?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 499,
+    "query": "전자공학과 소속 48세 미만 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 500,
+    "query": "컴퓨터공학과 소속 48세 초과 교수는?",
+    "answer": "박민수",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (48세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 501,
+    "query": "수학과 소속 부교수은 누구인가?",
+    "answer": "노현아",
+    "reference": "수학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 502,
+    "query": "남기훈 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "남기훈 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 503,
+    "query": "지식그래프 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "지식그래프 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 504,
+    "query": "수학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "수학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 505,
+    "query": "최준혁 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "최준혁 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 506,
+    "query": "정수진 교수의 이메일 주소는?",
+    "answer": "jungsj@univ.ac.kr",
+    "reference": "정수진 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 507,
+    "query": "스마트팩토리연구 프로젝트에 참여하는 교수는?",
+    "answer": "한상우, 안준호, 손민아",
+    "reference": "스마트팩토리연구 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 508,
+    "query": "백승현 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "백승현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 509,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 510,
+    "query": "데이터사이언스학과 소속 35세 초과 교수는?",
+    "answer": "전혜린, 홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 511,
+    "query": "블록체인보안연구 프로젝트의 연구 분야는?",
+    "answer": "Security",
+    "reference": "블록체인보안연구 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 512,
+    "query": "소프트웨어학과 소속 42세 미만 교수는?",
+    "answer": "장미래, 백승현",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 513,
+    "query": "사이버보안센터 프로젝트의 연구 분야는?",
+    "answer": "Cybersecurity",
+    "reference": "사이버보안센터 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 514,
+    "query": "데이터사이언스학과 소속 38세 초과 교수는?",
+    "answer": "전혜린, 홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 515,
+    "query": "장미래 교수의 직급은?",
+    "answer": "부교수",
+    "reference": "장미래 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 516,
+    "query": "클라우드컴퓨팅 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "클라우드컴퓨팅 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 517,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 518,
+    "query": "정보보안학과 소속 부교수은 누구인가?",
+    "answer": "이재원",
+    "reference": "정보보안학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 519,
+    "query": "최적화이론 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "최적화이론 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 520,
+    "query": "남기훈 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박민수, 김철수",
+    "reference": "남기훈 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 521,
+    "query": "소프트웨어학과 소속 40세 미만 교수는?",
+    "answer": "장미래, 백승현",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 522,
+    "query": "의료AI연구단 프로젝트의 연구 분야는?",
+    "answer": "Healthcare",
+    "reference": "의료AI연구단 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 523,
+    "query": "권오준 교수의 이메일 주소는?",
+    "answer": "kwonOJ@univ.ac.kr",
+    "reference": "권오준 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 524,
+    "query": "소프트웨어학과 소속 50세 이하 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 525,
+    "query": "전자공학과 소속 48세 이하 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 526,
+    "query": "최준혁 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "최준혁 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 527,
+    "query": "전체 교수 중 38세 이상인 사람은?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 임태양, 이영희, 강현도, 서민준, 남기훈, 장미래, 권오준, 류성민, 전혜린, 홍석진, 조성환, 이재원, 박태준, 손민아, 정기범, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 528,
+    "query": "운영체제 과목을 담당하는 교수는?",
+    "answer": "최준혁",
+    "reference": "운영체제 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 529,
+    "query": "문지혜 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 노현아",
+    "reference": "문지혜 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 530,
+    "query": "이재원 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "이재원 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 531,
+    "query": "서민준 교수의 연구 분야는?",
+    "answer": "생성모델, GAN",
+    "reference": "서민준 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 532,
+    "query": "정보보안학과 소속 45세 이하 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 533,
+    "query": "컴퓨터공학과 소속 40세 미만 교수는?",
+    "answer": "한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 534,
+    "query": "수학과 소속 48세 초과 교수는?",
+    "answer": "정기범",
+    "reference": "수학과 소속 교수 나이 조건 필터 (48세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 535,
+    "query": "자율주행AI프로젝트 프로젝트의 연구 분야는?",
+    "answer": "Vision/RL",
+    "reference": "자율주행AI프로젝트 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 536,
+    "query": "컴퓨터공학과 소속 38세 이하 교수는?",
+    "answer": "한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (38세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 537,
+    "query": "조성환 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "조성환 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 538,
+    "query": "인공지능학과 소속 45세 초과 교수는?",
+    "answer": "남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 539,
+    "query": "인공지능학과 소속 38세 이하 교수는?",
+    "answer": "이영희, 정수진, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (38세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 540,
+    "query": "노현아 교수의 소속 학과는?",
+    "answer": "수학과",
+    "reference": "노현아 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 541,
+    "query": "전자공학과 소속 50세 초과 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (50세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 542,
+    "query": "손민아 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "임베디드시스템",
+    "reference": "손민아 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 543,
+    "query": "김철수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김철수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 544,
+    "query": "통계학과 소속 45세 미만 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 545,
+    "query": "소프트웨어학과 소속 48세 미만 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 546,
+    "query": "하윤석 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "전혜린, 송나연",
+    "reference": "하윤석 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 547,
+    "query": "컴퓨터공학과 소속 42세 초과 교수는?",
+    "answer": "김철수, 박민수, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 548,
+    "query": "정보보안학과 소속 38세 미만 교수는?",
+    "answer": "김보람",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (38세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 549,
+    "query": "알고리즘 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "알고리즘 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 550,
+    "query": "안준호 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "안준호 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 551,
+    "query": "한상우 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 윤지현, 임태양",
+    "reference": "한상우 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 552,
+    "query": "강현도 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "강현도 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 553,
+    "query": "안준호 교수가 담당하는 과목은?",
+    "answer": "임베디드시스템",
+    "reference": "안준호 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 554,
+    "query": "백승현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "백승현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 555,
+    "query": "조성환 교수의 나이는?",
+    "answer": "47세",
+    "reference": "조성환 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 556,
+    "query": "남기훈 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "남기훈 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 557,
+    "query": "데이터사이언스학과 소속 45세 미만 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 558,
+    "query": "통계학과 소속 40세 이상 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 559,
+    "query": "백승현 교수의 나이는?",
+    "answer": "37세",
+    "reference": "백승현 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 560,
+    "query": "백승현 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "백승현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 561,
+    "query": "손민아 교수가 담당하는 과목은?",
+    "answer": "신호처리",
+    "reference": "손민아 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 562,
+    "query": "손민아 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "임베디드시스템",
+    "reference": "손민아 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 563,
+    "query": "운영체제 과목을 담당하는 교수는?",
+    "answer": "최준혁",
+    "reference": "운영체제 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 564,
+    "query": "인공지능개론 과목을 담당하는 교수는?",
+    "answer": "김철수",
+    "reference": "인공지능개론 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 565,
+    "query": "인공지능학과 소속 48세 미만 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 566,
+    "query": "알고리즘 과목을 담당하는 교수는?",
+    "answer": "최준혁",
+    "reference": "알고리즘 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 567,
+    "query": "임태양 교수의 이메일 주소는?",
+    "answer": "limty@univ.ac.kr",
+    "reference": "임태양 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 568,
+    "query": "남기훈 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박민수, 김철수",
+    "reference": "남기훈 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 569,
+    "query": "정수진 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이영희, 강현도",
+    "reference": "정수진 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 570,
+    "query": "손민아 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박태준, 안준호",
+    "reference": "손민아 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 571,
+    "query": "임태양 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현",
+    "reference": "임태양 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 572,
+    "query": "노현아 교수의 이메일 주소는?",
+    "answer": "noha@univ.ac.kr",
+    "reference": "노현아 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 573,
+    "query": "장미래 교수의 나이는?",
+    "answer": "39세",
+    "reference": "장미래 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 574,
+    "query": "메타버스연구소 프로젝트에 참여하는 교수는?",
+    "answer": "백승현, 서민준, 문지혜",
+    "reference": "메타버스연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 575,
+    "query": "안준호 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "안준호 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 576,
+    "query": "김보람 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 577,
+    "query": "박태준 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "박태준 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 578,
+    "query": "인공지능학과 소속 35세 초과 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 579,
+    "query": "장미래 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "장미래 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 580,
+    "query": "통계학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "통계학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 581,
+    "query": "정보보안학과 소속 48세 미만 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 582,
+    "query": "하윤석 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "하윤석 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 583,
+    "query": "전체 교수 중 52세 이상인 사람은?",
+    "answer": "박민수, 박태준",
+    "reference": "전체 교수 나이 조건 필터 (52세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 584,
+    "query": "전자공학과 소속 45세 이상 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 585,
+    "query": "전자공학과에 소속된 교수는 누구인가?",
+    "answer": "박태준, 손민아, 안준호",
+    "reference": "전자공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 586,
+    "query": "김보람 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 587,
+    "query": "한상우 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "한상우 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 588,
+    "query": "전자공학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "전자공학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 589,
+    "query": "컴퓨터공학과 소속 정교수은 누구인가?",
+    "answer": "김철수, 박민수, 임태양",
+    "reference": "컴퓨터공학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 590,
+    "query": "홍석진 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터베이스",
+    "reference": "홍석진 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 591,
+    "query": "머신러닝기초 과목을 담당하는 교수는?",
+    "answer": "김철수, 전혜린, 하윤석",
+    "reference": "머신러닝기초 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 592,
+    "query": "데이터사이언스학과 소속 40세 이하 교수는?",
+    "answer": "신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 593,
+    "query": "생성모델 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "생성모델 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 594,
+    "query": "한상우 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "한상우 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 595,
+    "query": "김보람 교수의 나이는?",
+    "answer": "36세",
+    "reference": "김보람 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 596,
+    "query": "양자컴퓨팅연구 프로젝트의 연구 분야는?",
+    "answer": "Quantum",
+    "reference": "양자컴퓨팅연구 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 597,
+    "query": "최준혁 교수의 연구 분야는?",
+    "answer": "알고리즘, 그래프이론",
+    "reference": "최준혁 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 598,
+    "query": "최준혁 교수의 연구 분야는?",
+    "answer": "알고리즘, 그래프이론",
+    "reference": "최준혁 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 599,
+    "query": "컴퓨터공학과 소속 42세 미만 교수는?",
+    "answer": "최준혁, 한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 600,
+    "query": "남기훈 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박민수, 김철수",
+    "reference": "남기훈 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 601,
+    "query": "윤지현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 임태양",
+    "reference": "윤지현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 602,
+    "query": "통계학과 소속 35세 초과 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 603,
+    "query": "통계학과 소속 42세 이상 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 604,
+    "query": "컴퓨터공학과 소속 35세 이하 교수는?",
+    "answer": "윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (35세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 605,
+    "query": "장미래 교수가 담당하는 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "장미래 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 606,
+    "query": "전자공학과 소속 조교수은 누구인가?",
+    "answer": "안준호",
+    "reference": "전자공학과 + 직급=조교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 607,
+    "query": "전자공학과에 소속된 교수는 누구인가?",
+    "answer": "박태준, 손민아, 안준호",
+    "reference": "전자공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 608,
+    "query": "통계학과 소속 38세 이상 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 609,
+    "query": "백승현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "백승현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 610,
+    "query": "머신러닝기초 과목을 담당하는 교수는?",
+    "answer": "김철수, 전혜린, 하윤석",
+    "reference": "머신러닝기초 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 611,
+    "query": "이재원 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "조성환, 김보람",
+    "reference": "이재원 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 612,
+    "query": "자연어이해 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "자연어이해 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 613,
+    "query": "윤지현 교수의 이메일 주소는?",
+    "answer": "yoonjh@univ.ac.kr",
+    "reference": "윤지현 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 614,
+    "query": "VLSI설계 과목을 담당하는 교수는?",
+    "answer": "박태준",
+    "reference": "VLSI설계 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 615,
+    "query": "소프트웨어학과 소속 40세 이상 교수는?",
+    "answer": "권오준, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 616,
+    "query": "정보보안학과 소속 45세 이상 교수는?",
+    "answer": "조성환",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 617,
+    "query": "한상우 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "안준호, 손민아",
+    "reference": "한상우 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 618,
+    "query": "김철수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김철수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 619,
+    "query": "하윤석 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터마이닝, 통계적학습, 머신러닝기초",
+    "reference": "하윤석 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 620,
+    "query": "남기훈 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "남기훈 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 621,
+    "query": "컴퓨터비전 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "컴퓨터비전 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 622,
+    "query": "클라우드인프라 프로젝트의 연구 분야는?",
+    "answer": "Cloud",
+    "reference": "클라우드인프라 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 623,
+    "query": "통계학과 소속 40세 미만 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 624,
+    "query": "손민아 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "손민아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 625,
+    "query": "박태준 교수의 소속 학과는?",
+    "answer": "전자공학과",
+    "reference": "박태준 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 626,
+    "query": "인공지능학과에 소속된 교수는 누구인가?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 627,
+    "query": "장미래 교수의 나이는?",
+    "answer": "39세",
+    "reference": "장미래 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 628,
+    "query": "정수진 교수의 나이는?",
+    "answer": "36세",
+    "reference": "정수진 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 629,
+    "query": "하윤석 교수의 이메일 주소는?",
+    "answer": "hays@univ.ac.kr",
+    "reference": "하윤석 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 630,
+    "query": "통계학과 소속 38세 초과 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 631,
+    "query": "데이터사이언스학과 소속 48세 초과 교수는?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (48세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 632,
+    "query": "컴퓨터공학과 소속 52세 미만 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 633,
+    "query": "VLSI설계 과목은 어느 학과에서 개설하는가?",
+    "answer": "전자공학과",
+    "reference": "VLSI설계 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 634,
+    "query": "모바일프로그래밍 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "모바일프로그래밍 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 635,
+    "query": "김철수 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박민수, 남기훈",
+    "reference": "김철수 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 636,
+    "query": "인공지능학과 소속 40세 이상 교수는?",
+    "answer": "강현도, 서민준, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 637,
+    "query": "안준호 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "신호처리",
+    "reference": "안준호 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 638,
+    "query": "노현아 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "노현아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 639,
+    "query": "수치해석 과목을 담당하는 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수치해석 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 640,
+    "query": "통계학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "통계학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 641,
+    "query": "인공지능학과 소속 40세 미만 교수는?",
+    "answer": "이영희, 정수진, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 642,
+    "query": "정보보안학과 소속 40세 이상 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 643,
+    "query": "전체 교수 중 48세 이하인 사람은?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양, 이영희, 정수진, 강현도, 서민준, 오지은, 장미래, 권오준, 백승현, 류성민, 전혜린, 신동현, 문지혜, 조성환, 김보람, 이재원, 손민아, 안준호, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 644,
+    "query": "서민준 교수의 나이는?",
+    "answer": "40세",
+    "reference": "서민준 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 645,
+    "query": "송나연 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "송나연 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 646,
+    "query": "수치해석 과목을 담당하는 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수치해석 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 647,
+    "query": "강현도 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "강현도 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 648,
+    "query": "컴퓨터공학과 소속 50세 초과 교수는?",
+    "answer": "박민수",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (50세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 649,
+    "query": "송나연 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "송나연 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 650,
+    "query": "인공지능학과 소속 52세 이하 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 651,
+    "query": "컴퓨터공학과 소속 48세 이하 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 652,
+    "query": "강화학습 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "강화학습 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 653,
+    "query": "전혜린 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "전혜린 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 654,
+    "query": "박태준 교수의 소속 학과는?",
+    "answer": "전자공학과",
+    "reference": "박태준 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 655,
+    "query": "전체 교수 중 50세 초과인 사람은?",
+    "answer": "박민수, 박태준, 정기범",
+    "reference": "전체 교수 나이 조건 필터 (50세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 656,
+    "query": "백승현 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "서민준, 문지혜",
+    "reference": "백승현 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 657,
+    "query": "김보람 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 658,
+    "query": "홍석진 교수의 소속 학과는?",
+    "answer": "데이터사이언스학과",
+    "reference": "홍석진 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 659,
+    "query": "이재원 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "이재원 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 660,
+    "query": "인공지능학과 소속 38세 이상 교수는?",
+    "answer": "이영희, 강현도, 서민준, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 661,
+    "query": "한상우 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "한상우 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 662,
+    "query": "통계학과 소속 48세 이하 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 663,
+    "query": "오지은 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 남기훈",
+    "reference": "오지은 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 664,
+    "query": "이영희 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "인공지능개론, 딥러닝, 강화학습, 자연어이해, 머신러닝기초",
+    "reference": "이영희 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 665,
+    "query": "류성민 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "류성민 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 666,
+    "query": "김보람 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "김보람 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 667,
+    "query": "컴퓨터공학과 소속 40세 초과 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 668,
+    "query": "전체 교수 중 40세 초과인 사람은?",
+    "answer": "김철수, 박민수, 최준혁, 임태양, 강현도, 남기훈, 권오준, 류성민, 전혜린, 홍석진, 조성환, 이재원, 박태준, 정기범, 노현아, 하윤석",
+    "reference": "전체 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 669,
+    "query": "신동현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 홍석진, 문지혜",
+    "reference": "신동현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 670,
+    "query": "전체 교수 중 52세 미만인 사람은?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양, 이영희, 정수진, 강현도, 서민준, 오지은, 남기훈, 장미래, 권오준, 백승현, 류성민, 전혜린, 신동현, 홍석진, 문지혜, 조성환, 김보람, 이재원, 손민아, 안준호, 정기범, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 671,
+    "query": "장미래 교수의 나이는?",
+    "answer": "39세",
+    "reference": "장미래 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 672,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 673,
+    "query": "빅데이터플랫폼 프로젝트에 참여하는 교수는?",
+    "answer": "임태양, 홍석진, 전혜린",
+    "reference": "빅데이터플랫폼 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 674,
+    "query": "박태준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "신호처리",
+    "reference": "박태준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 675,
+    "query": "남기훈 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "남기훈 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 676,
+    "query": "김보람 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "김보람 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 677,
+    "query": "손민아 교수의 나이는?",
+    "answer": "40세",
+    "reference": "손민아 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 678,
+    "query": "수학과 소속 35세 이상 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (35세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 679,
+    "query": "최준혁 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 한상우, 윤지현, 임태양",
+    "reference": "최준혁 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 680,
+    "query": "남기훈 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "남기훈 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 681,
+    "query": "인공지능개론 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "인공지능개론 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 682,
+    "query": "최준혁 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 한상우, 윤지현, 임태양",
+    "reference": "최준혁 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 683,
+    "query": "수학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "수학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 684,
+    "query": "자연어이해 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "자연어이해 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 685,
+    "query": "홍석진 교수의 소속 학과는?",
+    "answer": "데이터사이언스학과",
+    "reference": "홍석진 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 686,
+    "query": "박태준 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "정기범, 조성환",
+    "reference": "박태준 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 687,
+    "query": "정수진 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "정수진 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 688,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 689,
+    "query": "오지은 교수의 나이는?",
+    "answer": "33세",
+    "reference": "오지은 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 690,
+    "query": "그린AI연구소 프로젝트의 연구 분야는?",
+    "answer": "GreenAI",
+    "reference": "그린AI연구소 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 691,
+    "query": "박태준 교수의 나이는?",
+    "answer": "53세",
+    "reference": "박태준 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 692,
+    "query": "인공지능학과 소속 48세 초과 교수는?",
+    "answer": "남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (48세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 693,
+    "query": "한상우 교수의 이메일 주소는?",
+    "answer": "hansw@univ.ac.kr",
+    "reference": "한상우 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 694,
+    "query": "하윤석 교수의 나이는?",
+    "answer": "48세",
+    "reference": "하윤석 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 695,
+    "query": "전체 교수 중 42세 초과인 사람은?",
+    "answer": "김철수, 박민수, 임태양, 강현도, 남기훈, 권오준, 류성민, 홍석진, 조성환, 박태준, 정기범, 노현아, 하윤석",
+    "reference": "전체 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 696,
+    "query": "임태양 교수의 연구 분야는?",
+    "answer": "데이터베이스, 빅데이터",
+    "reference": "임태양 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 697,
+    "query": "김철수 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "김철수 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 698,
+    "query": "안준호 교수의 소속 학과는?",
+    "answer": "전자공학과",
+    "reference": "안준호 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 699,
+    "query": "송나연 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "송나연 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 700,
+    "query": "홍석진 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "홍석진 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 701,
+    "query": "하윤석 교수의 연구 분야는?",
+    "answer": "베이지안통계, 머신러닝",
+    "reference": "하윤석 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 702,
+    "query": "그린AI연구소 프로젝트에 참여하는 교수는?",
+    "answer": "오지은, 노현아, 문지혜",
+    "reference": "그린AI연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 703,
+    "query": "데이터거버넌스 프로젝트의 연구 분야는?",
+    "answer": "Governance",
+    "reference": "데이터거버넌스 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 704,
+    "query": "이영희 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "이영희 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 705,
+    "query": "손민아 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "손민아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 706,
+    "query": "홍석진 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "홍석진 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 707,
+    "query": "소프트웨어학과 소속 40세 이하 교수는?",
+    "answer": "장미래, 백승현",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 708,
+    "query": "서민준 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 송나연",
+    "reference": "서민준 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 709,
+    "query": "백승현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "백승현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 710,
+    "query": "확률론 과목은 어느 학과에서 개설하는가?",
+    "answer": "수학과",
+    "reference": "확률론 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 711,
+    "query": "강현도 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "강현도 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 712,
+    "query": "소프트웨어학과 소속 50세 미만 교수는?",
+    "answer": "장미래, 권오준, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 713,
+    "query": "손민아 교수의 연구 분야는?",
+    "answer": "신호처리, 통신시스템",
+    "reference": "손민아 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 714,
+    "query": "인공지능학과 소속 42세 이상 교수는?",
+    "answer": "강현도, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 715,
+    "query": "최준혁 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "자연어처리, 자연어이해",
+    "reference": "최준혁 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 716,
+    "query": "손민아 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박태준, 안준호",
+    "reference": "손민아 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 717,
+    "query": "통계학과 소속 42세 미만 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 718,
+    "query": "전자공학과 소속 38세 이상 교수는?",
+    "answer": "박태준, 손민아",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 719,
+    "query": "조성환 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "블록체인",
+    "reference": "조성환 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 720,
+    "query": "문지혜 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 노현아",
+    "reference": "문지혜 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 721,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 722,
+    "query": "류성민 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "류성민 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 723,
+    "query": "한상우 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "한상우 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 724,
+    "query": "이재원 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "이재원 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 725,
+    "query": "임태양 교수의 연구 분야는?",
+    "answer": "데이터베이스, 빅데이터",
+    "reference": "임태양 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 726,
+    "query": "김보람 교수의 소속 학과는?",
+    "answer": "정보보안학과",
+    "reference": "김보람 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 727,
+    "query": "박태준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "신호처리",
+    "reference": "박태준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 728,
+    "query": "백승현 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "백승현 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 729,
+    "query": "류성민 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "소프트웨어공학",
+    "reference": "류성민 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 730,
+    "query": "데이터사이언스학과 소속 부교수은 누구인가?",
+    "answer": "전혜린",
+    "reference": "데이터사이언스학과 + 직급=부교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 731,
+    "query": "인공지능개론 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "인공지능개론 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 732,
+    "query": "전자공학과 소속 35세 이상 교수는?",
+    "answer": "박태준, 손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (35세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 733,
+    "query": "클라우드인프라 프로젝트의 연구 분야는?",
+    "answer": "Cloud",
+    "reference": "클라우드인프라 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 734,
+    "query": "전자공학과 소속 50세 미만 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 735,
+    "query": "김보람 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "김보람 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 736,
+    "query": "수학과 소속 45세 이하 교수는?",
+    "answer": "노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 737,
+    "query": "수학과 소속 50세 이상 교수는?",
+    "answer": "정기범",
+    "reference": "수학과 소속 교수 나이 조건 필터 (50세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 738,
+    "query": "신호처리 과목을 담당하는 교수는?",
+    "answer": "손민아",
+    "reference": "신호처리 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 739,
+    "query": "지식그래프플랫폼 프로젝트의 연구 분야는?",
+    "answer": "KG",
+    "reference": "지식그래프플랫폼 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 740,
+    "query": "암호학 과목은 어느 학과에서 개설하는가?",
+    "answer": "정보보안학과",
+    "reference": "암호학 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 741,
+    "query": "통계학과 소속 48세 미만 교수는?",
+    "answer": "송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 742,
+    "query": "신동현 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터시각화",
+    "reference": "신동현 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 743,
+    "query": "강현도 교수의 이메일 주소는?",
+    "answer": "kanghd@univ.ac.kr",
+    "reference": "강현도 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 744,
+    "query": "수학과 소속 50세 미만 교수는?",
+    "answer": "노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 745,
+    "query": "데이터사이언스학과 소속 50세 이하 교수는?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 746,
+    "query": "통계학과 소속 45세 이상 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (45세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 747,
+    "query": "전체 교수 중 42세 미만인 사람은?",
+    "answer": "최준혁, 한상우, 윤지현, 이영희, 정수진, 서민준, 오지은, 장미래, 백승현, 전혜린, 신동현, 문지혜, 김보람, 손민아, 안준호, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 748,
+    "query": "소프트웨어학과 소속 42세 초과 교수는?",
+    "answer": "권오준, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 749,
+    "query": "인공지능학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "인공지능학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 750,
+    "query": "윤지현 교수의 이메일 주소는?",
+    "answer": "yoonjh@univ.ac.kr",
+    "reference": "윤지현 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 751,
+    "query": "권오준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "알고리즘, 운영체제",
+    "reference": "권오준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 752,
+    "query": "전체 교수 중 35세 초과인 사람은?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 임태양, 이영희, 정수진, 강현도, 서민준, 남기훈, 장미래, 권오준, 백승현, 류성민, 전혜린, 홍석진, 조성환, 김보람, 이재원, 박태준, 손민아, 안준호, 정기범, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 753,
+    "query": "전혜린 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "신동현, 홍석진, 문지혜",
+    "reference": "전혜린 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 754,
+    "query": "장미래 교수의 소속 학과는?",
+    "answer": "소프트웨어학과",
+    "reference": "장미래 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 755,
+    "query": "인공지능학과에 소속된 교수는 누구인가?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 756,
+    "query": "수학과에 소속된 교수는 누구인가?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 757,
+    "query": "백승현 교수의 연구 분야는?",
+    "answer": "모바일컴퓨팅, UX",
+    "reference": "백승현 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 758,
+    "query": "컴퓨터공학과 소속 38세 이상 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 759,
+    "query": "김보람 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "김보람 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 760,
+    "query": "조성환 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "블록체인",
+    "reference": "조성환 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 761,
+    "query": "정보보안학과에 소속된 교수는 누구인가?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 762,
+    "query": "최준혁 교수의 직급은?",
+    "answer": "부교수",
+    "reference": "최준혁 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 763,
+    "query": "확률론 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "확률론 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 764,
+    "query": "손민아 교수의 나이는?",
+    "answer": "40세",
+    "reference": "손민아 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 765,
+    "query": "조성환 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김보람, 이재원",
+    "reference": "조성환 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 766,
+    "query": "류성민 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 백승현",
+    "reference": "류성민 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 767,
+    "query": "안준호 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박태준, 손민아",
+    "reference": "안준호 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 768,
+    "query": "인공지능학과 소속 42세 이하 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 769,
+    "query": "이재원 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "조성환, 김보람",
+    "reference": "이재원 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 770,
+    "query": "소프트웨어학과 소속 38세 초과 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 771,
+    "query": "강현도 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "강현도 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 772,
+    "query": "박민수 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "인공지능개론, 딥러닝, 강화학습, 자연어이해, 머신러닝기초",
+    "reference": "박민수 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 773,
+    "query": "최준혁 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "최준혁 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 774,
+    "query": "노현아 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "노현아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 775,
+    "query": "한상우 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "안준호, 손민아",
+    "reference": "한상우 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 776,
+    "query": "정보보안학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "정보보안학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 777,
+    "query": "남기훈 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "남기훈 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 778,
+    "query": "데이터베이스 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "데이터베이스 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 779,
+    "query": "컴퓨터공학과 소속 50세 미만 교수는?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 780,
+    "query": "소프트웨어학과 소속 정교수은 누구인가?",
+    "answer": "권오준",
+    "reference": "소프트웨어학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 781,
+    "query": "인공지능학과 소속 45세 미만 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 782,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 783,
+    "query": "정교수에 해당하는 교수 목록은?",
+    "answer": "김철수, 박민수, 임태양, 강현도, 남기훈, 권오준, 홍석진, 조성환, 박태준, 정기범, 하윤석",
+    "reference": "직급 = 정교수 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 784,
+    "query": "오지은 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "오지은 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 785,
+    "query": "백승현 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "생성모델, 멀티모달AI",
+    "reference": "백승현 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 786,
+    "query": "노현아 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 문지혜",
+    "reference": "노현아 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 787,
+    "query": "조성환 교수의 소속 학과는?",
+    "answer": "정보보안학과",
+    "reference": "조성환 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 788,
+    "query": "수학과 소속 48세 미만 교수는?",
+    "answer": "노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (48세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 789,
+    "query": "이재원 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "암호학, 네트워크보안",
+    "reference": "이재원 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 790,
+    "query": "정기범 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "박태준, 조성환",
+    "reference": "정기범 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 791,
+    "query": "인공지능학과에 소속된 교수는 누구인가?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 792,
+    "query": "이재원 교수의 나이는?",
+    "answer": "42세",
+    "reference": "이재원 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 793,
+    "query": "최준혁 교수가 담당하는 과목은?",
+    "answer": "알고리즘, 운영체제",
+    "reference": "최준혁 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 794,
+    "query": "하윤석 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "하윤석 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 795,
+    "query": "문지혜 교수가 담당하는 과목은?",
+    "answer": "데이터시각화",
+    "reference": "문지혜 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 796,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 797,
+    "query": "데이터사이언스학과 소속 52세 이하 교수는?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 798,
+    "query": "최준혁 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 한상우, 윤지현, 임태양",
+    "reference": "최준혁 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 799,
+    "query": "전체 교수 중 40세 이상인 사람은?",
+    "answer": "김철수, 박민수, 최준혁, 임태양, 강현도, 서민준, 남기훈, 권오준, 류성민, 전혜린, 홍석진, 조성환, 이재원, 박태준, 손민아, 정기범, 노현아, 하윤석",
+    "reference": "전체 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 800,
+    "query": "인공지능학과 소속 40세 초과 교수는?",
+    "answer": "강현도, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 801,
+    "query": "오지은 교수의 연구 분야는?",
+    "answer": "설명가능AI, XAI",
+    "reference": "오지은 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 802,
+    "query": "오지은 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "노현아, 문지혜",
+    "reference": "오지은 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 803,
+    "query": "정보보안학과 소속 45세 초과 교수는?",
+    "answer": "조성환",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 804,
+    "query": "조성환 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "블록체인",
+    "reference": "조성환 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 805,
+    "query": "로봇공학 과목을 담당하는 교수는?",
+    "answer": "강현도",
+    "reference": "로봇공학 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 806,
+    "query": "전체 교수 중 50세 미만인 사람은?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양, 이영희, 정수진, 강현도, 서민준, 오지은, 장미래, 권오준, 백승현, 류성민, 전혜린, 신동현, 홍석진, 문지혜, 조성환, 김보람, 이재원, 손민아, 안준호, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 807,
+    "query": "백승현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "백승현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 808,
+    "query": "전체 교수 중 38세 미만인 사람은?",
+    "answer": "윤지현, 정수진, 오지은, 백승현, 신동현, 문지혜, 김보람, 안준호",
+    "reference": "전체 교수 나이 조건 필터 (38세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 809,
+    "query": "조성환 교수의 이메일 주소는?",
+    "answer": "joshh@univ.ac.kr",
+    "reference": "조성환 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 810,
+    "query": "신동현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 홍석진, 문지혜",
+    "reference": "신동현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 811,
+    "query": "소프트웨어학과 소속 45세 이하 교수는?",
+    "answer": "장미래, 백승현, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (45세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 812,
+    "query": "통계적학습 과목을 담당하는 교수는?",
+    "answer": "전혜린, 하윤석",
+    "reference": "통계적학습 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 813,
+    "query": "수학과 소속 40세 초과 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (40세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 814,
+    "query": "수학과 소속 정교수은 누구인가?",
+    "answer": "정기범",
+    "reference": "수학과 + 직급=정교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 815,
+    "query": "최적화이론 과목은 어느 학과에서 개설하는가?",
+    "answer": "수학과",
+    "reference": "최적화이론 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 816,
+    "query": "박민수 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "박민수 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 817,
+    "query": "데이터사이언스학과은 어느 단과대학 소속인가?",
+    "answer": "이과대학",
+    "reference": "데이터사이언스학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 818,
+    "query": "한상우 교수가 담당하는 과목은?",
+    "answer": "분산시스템, 클라우드컴퓨팅, 컴퓨터네트워크",
+    "reference": "한상우 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 819,
+    "query": "정보보안학과 소속 35세 초과 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (35세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 820,
+    "query": "양자컴퓨팅연구 프로젝트에 참여하는 교수는?",
+    "answer": "정기범, 박태준, 조성환",
+    "reference": "양자컴퓨팅연구 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 821,
+    "query": "류성민 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "류성민 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 822,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 823,
+    "query": "지식그래프플랫폼 프로젝트의 연구 분야는?",
+    "answer": "KG",
+    "reference": "지식그래프플랫폼 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 824,
+    "query": "양자컴퓨팅연구 프로젝트의 연구 분야는?",
+    "answer": "Quantum",
+    "reference": "양자컴퓨팅연구 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 825,
+    "query": "데이터거버넌스 프로젝트의 연구 분야는?",
+    "answer": "Governance",
+    "reference": "데이터거버넌스 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 826,
+    "query": "윤지현 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "윤지현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 827,
+    "query": "컴퓨터공학과 소속 45세 미만 교수는?",
+    "answer": "최준혁, 한상우, 윤지현",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (45세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 828,
+    "query": "백승현 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "백승현 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 829,
+    "query": "스마트팩토리연구 프로젝트의 연구 분야는?",
+    "answer": "IoT",
+    "reference": "스마트팩토리연구 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 830,
+    "query": "자율주행AI프로젝트 프로젝트의 연구 분야는?",
+    "answer": "Vision/RL",
+    "reference": "자율주행AI프로젝트 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 831,
+    "query": "강현도 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "컴퓨터비전",
+    "reference": "강현도 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 832,
+    "query": "전혜린 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "신동현, 홍석진, 문지혜",
+    "reference": "전혜린 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 833,
+    "query": "홍석진 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "임태양, 전혜린",
+    "reference": "홍석진 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 834,
+    "query": "전자공학과 소속 42세 초과 교수는?",
+    "answer": "박태준",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 835,
+    "query": "선형대수학 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "선형대수학 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 836,
+    "query": "윤지현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 임태양",
+    "reference": "윤지현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 837,
+    "query": "베이지안통계 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "베이지안통계 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 838,
+    "query": "전자공학과 소속 42세 이하 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (42세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 839,
+    "query": "수학과 소속 48세 이하 교수는?",
+    "answer": "노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 840,
+    "query": "데이터사이언스학과에 소속된 교수는 누구인가?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 841,
+    "query": "한상우 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "클라우드컴퓨팅, DevOps실습",
+    "reference": "한상우 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 842,
+    "query": "안준호 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "신호처리",
+    "reference": "안준호 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 843,
+    "query": "인공지능학과 소속 50세 이하 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 844,
+    "query": "서민준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "서민준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 845,
+    "query": "데이터사이언스학과 소속 42세 미만 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (42세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 846,
+    "query": "의료AI연구단 프로젝트에 참여하는 교수는?",
+    "answer": "서민준, 오지은, 송나연",
+    "reference": "의료AI연구단 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 847,
+    "query": "조성환 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "이재원, 김보람",
+    "reference": "조성환 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 848,
+    "query": "데이터사이언스학과 소속 48세 이하 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 849,
+    "query": "통계학과 소속 50세 미만 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 850,
+    "query": "노현아 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 문지혜",
+    "reference": "노현아 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 851,
+    "query": "류성민 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 백승현",
+    "reference": "류성민 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 852,
+    "query": "백승현 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "서민준, 문지혜",
+    "reference": "백승현 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 853,
+    "query": "강현도 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 이영희",
+    "reference": "강현도 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 854,
+    "query": "운영체제 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "운영체제 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 855,
+    "query": "백승현 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "백승현 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 856,
+    "query": "수학과 소속 50세 초과 교수는?",
+    "answer": "정기범",
+    "reference": "수학과 소속 교수 나이 조건 필터 (50세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 857,
+    "query": "자율주행AI프로젝트 프로젝트에 참여하는 교수는?",
+    "answer": "이영희, 정수진, 강현도",
+    "reference": "자율주행AI프로젝트 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 858,
+    "query": "조성환 교수의 직급은?",
+    "answer": "정교수",
+    "reference": "조성환 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 859,
+    "query": "인공지능학과 소속 42세 초과 교수는?",
+    "answer": "강현도, 남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 860,
+    "query": "홍석진 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "홍석진 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 861,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 862,
+    "query": "박민수 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 남기훈",
+    "reference": "박민수 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 863,
+    "query": "서민준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "서민준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 864,
+    "query": "수학과에 소속된 교수는 누구인가?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 865,
+    "query": "전체 교수 중 50세 이하인 사람은?",
+    "answer": "김철수, 최준혁, 한상우, 윤지현, 임태양, 이영희, 정수진, 강현도, 서민준, 오지은, 남기훈, 장미래, 권오준, 백승현, 류성민, 전혜린, 신동현, 홍석진, 문지혜, 조성환, 김보람, 이재원, 손민아, 안준호, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 866,
+    "query": "멀티모달AI 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "멀티모달AI 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 867,
+    "query": "정보보안학과 소속 42세 초과 교수는?",
+    "answer": "조성환",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (42세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 868,
+    "query": "신동현 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "데이터시각화",
+    "reference": "신동현 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 869,
+    "query": "데이터거버넌스 프로젝트에 참여하는 교수는?",
+    "answer": "전혜린, 하윤석, 송나연",
+    "reference": "데이터거버넌스 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 870,
+    "query": "신동현 교수의 연구 분야는?",
+    "answer": "시계열분석, 예측모델",
+    "reference": "신동현 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 871,
+    "query": "윤지현 교수의 나이는?",
+    "answer": "35세",
+    "reference": "윤지현 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 872,
+    "query": "데이터사이언스학과 소속 48세 이상 교수는?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 873,
+    "query": "강현도 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은, 남기훈",
+    "reference": "강현도 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 874,
+    "query": "박태준 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "정기범, 조성환",
+    "reference": "박태준 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 875,
+    "query": "자율주행AI프로젝트 프로젝트의 연구 분야는?",
+    "answer": "Vision/RL",
+    "reference": "자율주행AI프로젝트 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 876,
+    "query": "데이터사이언스학과 소속 42세 이상 교수는?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 877,
+    "query": "임태양 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "임태양 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 878,
+    "query": "문지혜 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "오지은, 노현아",
+    "reference": "문지혜 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 879,
+    "query": "전자공학과 소속 40세 미만 교수는?",
+    "answer": "안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (40세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 880,
+    "query": "안준호 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "신호처리",
+    "reference": "안준호 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 881,
+    "query": "인공지능학과 소속 40세 이하 교수는?",
+    "answer": "이영희, 정수진, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 882,
+    "query": "분산시스템 과목을 담당하는 교수는?",
+    "answer": "한상우",
+    "reference": "분산시스템 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 883,
+    "query": "오지은 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "노현아, 문지혜",
+    "reference": "오지은 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 884,
+    "query": "남기훈 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "설명가능AI, 멀티모달AI, AI윤리",
+    "reference": "남기훈 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 885,
+    "query": "이영희 교수의 연구 분야는?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "이영희 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 886,
+    "query": "문지혜 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "문지혜 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 887,
+    "query": "손민아 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 안준호",
+    "reference": "손민아 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 888,
+    "query": "통계학과 소속 52세 이하 교수는?",
+    "answer": "하윤석, 송나연",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 889,
+    "query": "안준호 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 손민아",
+    "reference": "안준호 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 890,
+    "query": "이영희 교수가 담당하는 과목은?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "이영희 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 891,
+    "query": "이영희 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 강현도",
+    "reference": "이영희 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 892,
+    "query": "최준혁 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "최준혁 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 893,
+    "query": "이재원 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "이재원 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 894,
+    "query": "박민수 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 남기훈",
+    "reference": "박민수 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 895,
+    "query": "김보람 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "김보람 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 896,
+    "query": "강현도 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 이영희",
+    "reference": "강현도 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 897,
+    "query": "김철수 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "지식그래프, AI윤리",
+    "reference": "김철수 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 898,
+    "query": "DevOps실습 과목을 담당하는 교수는?",
+    "answer": "류성민",
+    "reference": "DevOps실습 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 899,
+    "query": "수학과 소속 48세 이상 교수는?",
+    "answer": "정기범",
+    "reference": "수학과 소속 교수 나이 조건 필터 (48세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 900,
+    "query": "임태양 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "홍석진, 전혜린",
+    "reference": "임태양 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 901,
+    "query": "이재원 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "조성환, 김보람",
+    "reference": "이재원 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 902,
+    "query": "정수진 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "정수진 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 903,
+    "query": "전체 교수 중 38세 초과인 사람은?",
+    "answer": "김철수, 박민수, 최준혁, 임태양, 강현도, 서민준, 남기훈, 장미래, 권오준, 류성민, 전혜린, 홍석진, 조성환, 이재원, 박태준, 손민아, 정기범, 노현아, 하윤석, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 904,
+    "query": "설명가능AI 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "설명가능AI 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 905,
+    "query": "오지은 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "오지은 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 906,
+    "query": "이재원 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "이재원 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 907,
+    "query": "컴퓨터공학과 소속 52세 이하 교수는?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (52세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 908,
+    "query": "하윤석 교수의 나이는?",
+    "answer": "48세",
+    "reference": "하윤석 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 909,
+    "query": "전자공학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "전자공학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 910,
+    "query": "장미래 교수의 이메일 주소는?",
+    "answer": "jangmr@univ.ac.kr",
+    "reference": "장미래 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 911,
+    "query": "데이터사이언스학과 소속 조교수은 누구인가?",
+    "answer": "신동현, 문지혜",
+    "reference": "데이터사이언스학과 + 직급=조교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 912,
+    "query": "안준호 교수의 연구 분야는?",
+    "answer": "임베디드, FPGA",
+    "reference": "안준호 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 913,
+    "query": "자연어이해 과목을 담당하는 교수는?",
+    "answer": "김철수, 박민수",
+    "reference": "자연어이해 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 914,
+    "query": "전혜린 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "전혜린 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 915,
+    "query": "서민준 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "서민준 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 916,
+    "query": "전자공학과 소속 38세 미만 교수는?",
+    "answer": "안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (38세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 917,
+    "query": "인공지능학과 소속 50세 미만 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 918,
+    "query": "장미래 교수의 이메일 주소는?",
+    "answer": "jangmr@univ.ac.kr",
+    "reference": "장미래 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 919,
+    "query": "머신러닝기초 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "머신러닝기초 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 920,
+    "query": "지식그래프 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "지식그래프 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 921,
+    "query": "문지혜 교수가 담당하는 과목은?",
+    "answer": "데이터시각화",
+    "reference": "문지혜 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 922,
+    "query": "컴퓨터공학과 소속 45세 초과 교수는?",
+    "answer": "박민수, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 923,
+    "query": "홍석진 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "전혜린, 신동현, 문지혜",
+    "reference": "홍석진 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 924,
+    "query": "베이지안통계 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "베이지안통계 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 925,
+    "query": "박민수 교수가 담당하는 과목은?",
+    "answer": "자연어처리, 자연어이해",
+    "reference": "박민수 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 926,
+    "query": "정보보안학과 소속 50세 미만 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (50세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 927,
+    "query": "딥러닝 과목을 담당하는 교수는?",
+    "answer": "김철수, 이영희",
+    "reference": "딥러닝 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 928,
+    "query": "오지은 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "노현아, 문지혜",
+    "reference": "오지은 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 929,
+    "query": "김보람 교수의 연구 분야는?",
+    "answer": "사이버포렌식, 취약점분석",
+    "reference": "김보람 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 930,
+    "query": "지식그래프플랫폼 프로젝트의 연구 분야는?",
+    "answer": "KG",
+    "reference": "지식그래프플랫폼 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 931,
+    "query": "인공지능학과 소속 48세 이하 교수는?",
+    "answer": "이영희, 정수진, 강현도, 서민준, 오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (48세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 932,
+    "query": "블록체인보안연구 프로젝트의 연구 분야는?",
+    "answer": "Security",
+    "reference": "블록체인보안연구 프로젝트 분야",
+    "type": "simple"
+  },
+  {
+    "id": 933,
+    "query": "정수진 교수의 연구 분야는?",
+    "answer": "딥러닝, 컴퓨터비전",
+    "reference": "정수진 교수 연구 정보",
+    "type": "simple"
+  },
+  {
+    "id": 934,
+    "query": "정기범 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "노현아",
+    "reference": "정기범 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 935,
+    "query": "소프트웨어학과 소속 조교수은 누구인가?",
+    "answer": "백승현",
+    "reference": "소프트웨어학과 + 직급=조교수 복합 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 936,
+    "query": "전자공학과 소속 40세 이상 교수는?",
+    "answer": "박태준, 손민아",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (40세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 937,
+    "query": "네트워크보안 과목은 어느 학과에서 개설하는가?",
+    "answer": "정보보안학과",
+    "reference": "네트워크보안 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 938,
+    "query": "부교수에 해당하는 교수 목록은?",
+    "answer": "최준혁, 이영희, 서민준, 장미래, 류성민, 전혜린, 이재원, 손민아, 노현아, 송나연",
+    "reference": "직급 = 부교수 필터",
+    "type": "conditional"
+  },
+  {
+    "id": 939,
+    "query": "손민아 교수의 나이는?",
+    "answer": "40세",
+    "reference": "손민아 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 940,
+    "query": "신동현 교수의 직급은?",
+    "answer": "조교수",
+    "reference": "신동현 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 941,
+    "query": "전체 교수 중 52세 초과인 사람은?",
+    "answer": "박태준",
+    "reference": "전체 교수 나이 조건 필터 (52세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 942,
+    "query": "인공지능학과 소속 50세 이상 교수는?",
+    "answer": "남기훈",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (50세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 943,
+    "query": "블록체인보안연구 프로젝트에 참여하는 교수는?",
+    "answer": "조성환, 이재원, 김보람",
+    "reference": "블록체인보안연구 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 944,
+    "query": "안준호 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "안준호 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 945,
+    "query": "컴퓨터공학과에 소속된 교수는 누구인가?",
+    "answer": "김철수, 박민수, 최준혁, 한상우, 윤지현, 임태양",
+    "reference": "컴퓨터공학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 946,
+    "query": "전혜린 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "임태양, 홍석진",
+    "reference": "전혜린 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 947,
+    "query": "데이터사이언스학과 소속 45세 초과 교수는?",
+    "answer": "홍석진",
+    "reference": "데이터사이언스학과 소속 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 948,
+    "query": "전자공학과 소속 50세 이하 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (50세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 949,
+    "query": "시계열분석 과목을 담당하는 교수는?",
+    "answer": "신동현",
+    "reference": "시계열분석 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 950,
+    "query": "확률론 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "확률론 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 951,
+    "query": "박태준 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "정기범, 조성환",
+    "reference": "박태준 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 952,
+    "query": "수학과 소속 38세 이상 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 953,
+    "query": "정수진 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "정수진 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 954,
+    "query": "인공지능학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "인공지능학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 955,
+    "query": "자연어이해 과목은 어느 학과에서 개설하는가?",
+    "answer": "인공지능학과",
+    "reference": "자연어이해 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 956,
+    "query": "수학과 소속 38세 초과 교수는?",
+    "answer": "정기범, 노현아",
+    "reference": "수학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 957,
+    "query": "AI윤리 과목을 담당하는 교수는?",
+    "answer": "오지은, 남기훈",
+    "reference": "AI윤리 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 958,
+    "query": "이영희 교수의 직급은?",
+    "answer": "부교수",
+    "reference": "이영희 교수 직급 정보",
+    "type": "simple"
+  },
+  {
+    "id": 959,
+    "query": "권오준 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "알고리즘, 운영체제",
+    "reference": "권오준 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 960,
+    "query": "손민아 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 안준호",
+    "reference": "손민아 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 961,
+    "query": "정수진 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "정수진 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 962,
+    "query": "박태준 교수의 나이는?",
+    "answer": "53세",
+    "reference": "박태준 교수 나이 정보",
+    "type": "simple"
+  },
+  {
+    "id": 963,
+    "query": "전혜린 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "임태양, 홍석진",
+    "reference": "전혜린 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 964,
+    "query": "클라우드컴퓨팅 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "클라우드컴퓨팅 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 965,
+    "query": "김보람 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "김보람 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 966,
+    "query": "전체 교수 중 40세 이하인 사람은?",
+    "answer": "한상우, 윤지현, 이영희, 정수진, 서민준, 오지은, 장미래, 백승현, 신동현, 문지혜, 김보람, 손민아, 안준호, 송나연",
+    "reference": "전체 교수 나이 조건 필터 (40세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 967,
+    "query": "전체 교수 중 42세 이상인 사람은?",
+    "answer": "김철수, 박민수, 임태양, 강현도, 남기훈, 권오준, 류성민, 홍석진, 조성환, 이재원, 박태준, 정기범, 노현아, 하윤석",
+    "reference": "전체 교수 나이 조건 필터 (42세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 968,
+    "query": "데이터사이언스학과에 소속된 교수는 누구인가?",
+    "answer": "전혜린, 신동현, 홍석진, 문지혜",
+    "reference": "데이터사이언스학과 소속 교수 목록",
+    "type": "simple"
+  },
+  {
+    "id": 969,
+    "query": "전자공학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "전자공학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 970,
+    "query": "박태준 교수가 담당하는 과목은?",
+    "answer": "VLSI설계",
+    "reference": "박태준 교수 담당 과목",
+    "type": "simple"
+  },
+  {
+    "id": 971,
+    "query": "권오준 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "권오준 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 972,
+    "query": "데이터시각화 과목은 몇 학점인가?",
+    "answer": "3학점",
+    "reference": "데이터시각화 과목 학점 정보",
+    "type": "simple"
+  },
+  {
+    "id": 973,
+    "query": "자율주행AI프로젝트 프로젝트에 참여하는 교수는?",
+    "answer": "이영희, 정수진, 강현도",
+    "reference": "자율주행AI프로젝트 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 974,
+    "query": "조성환 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "블록체인",
+    "reference": "조성환 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 975,
+    "query": "전자공학과 소속 52세 미만 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "전자공학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 976,
+    "query": "전혜린 교수와 협력하는 교수의 담당 과목은?",
+    "answer": "통계적학습, 베이지안통계, 머신러닝기초",
+    "reference": "전혜린 협력 교수 → 담당 과목",
+    "type": "multi_hop"
+  },
+  {
+    "id": 977,
+    "query": "AI융합연구소 프로젝트에 참여하는 교수는?",
+    "answer": "김철수, 이영희, 강현도",
+    "reference": "AI융합연구소 프로젝트 참여 교수",
+    "type": "simple"
+  },
+  {
+    "id": 978,
+    "query": "임태양 교수가 소속된 학과의 단과대학은?",
+    "answer": "공과대학",
+    "reference": "임태양 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 979,
+    "query": "정보보안학과 소속 38세 초과 교수는?",
+    "answer": "조성환, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (38세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 980,
+    "query": "블록체인 과목은 어느 학과에서 개설하는가?",
+    "answer": "정보보안학과",
+    "reference": "블록체인 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 981,
+    "query": "인공지능학과 소속 35세 이하 교수는?",
+    "answer": "오지은",
+    "reference": "인공지능학과 소속 교수 나이 조건 필터 (35세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 982,
+    "query": "컴퓨터네트워크 과목은 어느 학과에서 개설하는가?",
+    "answer": "컴퓨터공학과",
+    "reference": "컴퓨터네트워크 개설 학과",
+    "type": "simple"
+  },
+  {
+    "id": 983,
+    "query": "전체 교수 중 35세 이하인 사람은?",
+    "answer": "윤지현, 오지은, 신동현, 문지혜",
+    "reference": "전체 교수 나이 조건 필터 (35세 이하)",
+    "type": "conditional"
+  },
+  {
+    "id": 984,
+    "query": "권오준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "장미래, 백승현, 류성민",
+    "reference": "권오준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 985,
+    "query": "문지혜 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "문지혜 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 986,
+    "query": "김보람 교수의 이메일 주소는?",
+    "answer": "kimbr@univ.ac.kr",
+    "reference": "김보람 교수 연락처",
+    "type": "simple"
+  },
+  {
+    "id": 987,
+    "query": "남기훈 교수의 소속 학과는?",
+    "answer": "인공지능학과",
+    "reference": "남기훈 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 988,
+    "query": "박민수 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "김철수, 남기훈",
+    "reference": "박민수 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 989,
+    "query": "전자공학과은 어느 단과대학 소속인가?",
+    "answer": "공과대학",
+    "reference": "전자공학과 소속 단과대학",
+    "type": "simple"
+  },
+  {
+    "id": 990,
+    "query": "생존분석 과목을 담당하는 교수는?",
+    "answer": "송나연",
+    "reference": "생존분석 과목 담당 정보",
+    "type": "simple"
+  },
+  {
+    "id": 991,
+    "query": "통계학과 소속 45세 초과 교수는?",
+    "answer": "하윤석",
+    "reference": "통계학과 소속 교수 나이 조건 필터 (45세 초과)",
+    "type": "conditional"
+  },
+  {
+    "id": 992,
+    "query": "정보보안학과 소속 52세 미만 교수는?",
+    "answer": "조성환, 김보람, 이재원",
+    "reference": "정보보안학과 소속 교수 나이 조건 필터 (52세 미만)",
+    "type": "conditional"
+  },
+  {
+    "id": 993,
+    "query": "정수진 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "이영희, 강현도, 서민준, 오지은, 남기훈",
+    "reference": "정수진 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 994,
+    "query": "안준호 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "박태준, 손민아",
+    "reference": "안준호 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 995,
+    "query": "노현아 교수가 소속된 학과의 단과대학은?",
+    "answer": "이과대학",
+    "reference": "노현아 → 학과 → 단과대학",
+    "type": "multi_hop"
+  },
+  {
+    "id": 996,
+    "query": "소프트웨어학과 소속 38세 이상 교수는?",
+    "answer": "장미래, 권오준, 류성민",
+    "reference": "소프트웨어학과 소속 교수 나이 조건 필터 (38세 이상)",
+    "type": "conditional"
+  },
+  {
+    "id": 997,
+    "query": "한상우 교수의 소속 학과는?",
+    "answer": "컴퓨터공학과",
+    "reference": "한상우 교수 소속 정보",
+    "type": "simple"
+  },
+  {
+    "id": 998,
+    "query": "박태준 교수와 같은 학과 소속인 다른 교수는?",
+    "answer": "손민아, 안준호",
+    "reference": "박태준 소속 학과 → 동일 학과 교수 목록",
+    "type": "multi_hop"
+  },
+  {
+    "id": 999,
+    "query": "안준호 교수가 참여하는 프로젝트의 다른 구성원은?",
+    "answer": "강현도, 손민아",
+    "reference": "안준호 → 프로젝트 → 공동 참여 교수",
+    "type": "multi_hop"
+  },
+  {
+    "id": 1000,
+    "query": "인공지능학과 소속 조교수은 누구인가?",
+    "answer": "정수진, 오지은",
+    "reference": "인공지능학과 + 직급=조교수 복합 필터",
+    "type": "conditional"
+  }
+]
