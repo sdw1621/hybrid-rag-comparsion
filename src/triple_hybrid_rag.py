@@ -100,22 +100,23 @@ class TripleHybridRAG:
             import sys, os
             sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
             from data.dataset_generator import generate_university_data
-            depts, professors, courses, projects, dept_profs, dept_courses, course_profs = \
-                generate_university_data(seed=42)
+            data = generate_university_data(seed=42)
+            depts       = data["depts"]
+            professors  = data["professors"]
+            courses     = data["courses"]
+            projects    = data["projects"]
             self.graph.load_university_data()
             docs = []
             for p in professors:
-                dept_name = next((d["name"] for d in depts if d["id"] == p["dept_id"]), "")
                 docs.append(
-                    f"{p['name']} 교수는 {p['age']}세이며 {dept_name} 소속이다. "
-                    f"직급은 {p['rank']}이고 연구 분야는 {p['research']}이다."
+                    f"{p['name']} 교수는 {p['age']}세이며 {p['dept']} 소속이다. "
+                    f"연구 분야는 {p['research']}이다."
                 )
-            for d in depts:
-                docs.append(f"{d['name']}은(는) {d['college']} 소속 학과이다.")
-            for pr in projects:
+            for dept_name in depts:
+                docs.append(f"{dept_name}은(는) 본 대학 소속 학과이다.")
+            for proj_name, participants in projects.items():
                 docs.append(
-                    f"{pr['name']} 프로젝트는 {pr['type']} 유형이며 "
-                    f"기간은 {pr['start']}~{pr['end']}이다."
+                    f"{proj_name} 프로젝트에는 {', '.join(participants[:3])} 등이 참여하고 있다."
                 )
             self.add_documents(docs)
         else:
