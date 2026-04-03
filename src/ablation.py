@@ -1,6 +1,6 @@
 """
 Ablation Study
-논문 Table 15 / Section VI.3 구현
+논문 Table 10 / Section VI.3 구현
 (A) Equal Weight  α=β=γ=0.33
 (B) Type-Fixed    Table 4 기본 가중치만 (Stage 2 없음)
 (C) Full DWA      연속 조정 포함 (λ=0.3)
@@ -100,7 +100,7 @@ class AblationStudy:
 
     def _print_table(self, results: Dict):
         print("\n" + "="*70)
-        print("Table 15. Ablation Study Results")
+        print("Table 10. DWA Ablation Study Results")
         print("="*70)
         print(f"{'Config':<15} {'F1':>8} {'EM':>8} {'MH_EM':>10} {'Cond_EM':>10}")
         print("-"*70)

@@ -1,5 +1,5 @@
 """
-소스별 Ablation Study — 논문 Table 15-b 수치 산출
+소스별 Ablation Study — 논문 Table 11 수치 산출
 (D) Vector-Only
 (E) Vector+Graph       (Ontology 비활성)
 (F) Vector+Ontology    (Graph 비활성)
@@ -63,7 +63,7 @@ def run_source_ablation(api_key: str, sample_size: int, runs: int = 3, seed: int
     os.environ["OPENAI_API_KEY"] = api_key
 
     print("=" * 60)
-    print("Source-Level Ablation Study — Table 15-b")
+    print("Source-Level Ablation Study — Table 11")
     print(f"샘플: {sample_size}개  |  반복: {runs}회")
     print("=" * 60)
 
@@ -163,7 +163,7 @@ def run_source_ablation(api_key: str, sample_size: int, runs: int = 3, seed: int
 
     # 결과 출력
     print("\n" + "=" * 80)
-    print("Table 15-b. Source-Level Ablation Study (DWA applied, mean±std, 3 runs)")
+    print("Table 11. Source-Level Ablation Study (DWA applied, mean±std, 3 runs)")
     print("=" * 80)
     print(f"{'Configuration':<25} {'F1':>12} {'EM':>12} {'Multi-hop EM':>14} {'Cond. EM':>12}")
     print("-" * 80)

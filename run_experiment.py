@@ -1,5 +1,5 @@
 """
-실험 실행 스크립트 — 논문 Table 13~15 수치 산출
+실험 실행 스크립트 — 논문 Table 8~10 수치 산출
 5,000 Gold QA × 3 runs → 실제 OpenAI API 호출
 
 실행 방법:
@@ -218,7 +218,7 @@ def run_experiment(api_key: str, sample_size: int, runs: int = 3, seed: int = 42
 
     # ── 6. 결과 출력 ─────────────────────────────────────────
     print("\n" + "=" * 60)
-    print("📊 최종 결과 (Table 13 형식)")
+    print("📊 최종 결과 (Table 8 형식)")
     print("=" * 60)
     print(f"{'시스템':<16} {'F1':>8} {'EM':>8} {'Recall@3':>10} {'Precision':>10} {'Faithfulness':>13}")
     print("-" * 65)
@@ -230,7 +230,7 @@ def run_experiment(api_key: str, sample_size: int, runs: int = 3, seed: int = 42
               f"{r['Precision']['mean']:.2f}±{r['Precision']['std']:.2f}    "
               f"{r['Faithfulness']['mean']:.2f}±{r['Faithfulness']['std']:.2f}")
 
-    print(f"\n질의 유형별 EM (Table 14):")
+    print(f"\n질의 유형별 EM (Table 9):")
     th = results.get("Triple-Hybrid", {}).get("by_type", {})
     vo = results.get("Vector-Only",   {}).get("by_type", {})
     for t in ["simple", "multi_hop", "conditional"]:

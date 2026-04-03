@@ -84,8 +84,8 @@ hybrid-rag-comparsion/
 │   ├── dataset_generator.py   # Gold QA 생성기
 │   ├── gold_qa_5000.json      # Gold QA 5,000쌍
 │   └── university_data.py     # 합성 대학 행정 데이터
-├── run_experiment.py           # Table 13~14 전체 실험 스크립트
-├── run_source_ablation.py      # Table 15-b 소스별 Ablation 스크립트
+├── run_experiment.py           # Table 8~9 전체 실험 스크립트
+├── run_source_ablation.py      # Table 11 소스별 Ablation 스크립트
 ├── tests/
 │   └── test_dwa.py            # DWA 단위 테스트
 └── requirements.txt
@@ -118,7 +118,7 @@ hybrid-rag-comparsion/
 
 ## 실험 결과
 
-### Table 13. Overall Performance (mean +/- std, Gold QA 5,000 x 3 runs)
+### Table 8. Overall Performance (mean +/- std, Gold QA 5,000 x 3 runs)
 
 | System | F1 | EM | Recall@3 | Precision | Faithfulness |
 |--------|----|----|----------|-----------|--------------|
@@ -128,7 +128,7 @@ hybrid-rag-comparsion/
 | Adaptive-RAG | 0.78 +/- 0.02 | 0.66 +/- 0.03 | 0.84 +/- 0.02 | 0.74 +/- 0.02 | 0.76 +/- 0.02 |
 | **Triple-Hybrid** | **0.86 +/- 0.01** | **0.78 +/- 0.02** | **0.92 +/- 0.01** | **0.84 +/- 0.01** | **0.89 +/- 0.01** |
 
-### Table 14. Performance by Query Type (Normalized EM, mean +/- std, 3 runs)
+### Table 9. Performance by Query Type (Normalized EM, mean +/- std, 3 runs)
 
 | Query Type | V-Only Norm | Triple Norm | Delta |
 |------------|-------------|-------------|-------|
@@ -136,7 +136,7 @@ hybrid-rag-comparsion/
 | Multi-hop | 0.31 +/- 0.03 | 0.96 +/- 0.01 | +209.7% |
 | Conditional | 0.42 +/- 0.02 | 0.91 +/- 0.01 | +116.7% |
 
-### Table 15. Ablation Study -- DWA Weight Configuration
+### Table 10. DWA Ablation Study
 
 | Configuration | F1 | EM | Multi-hop EM | Cond. EM |
 |---------------|----|----|-------------|----------|
@@ -144,15 +144,15 @@ hybrid-rag-comparsion/
 | (B) Type-Fixed | 0.84 +/- 0.01 | 0.75 +/- 0.02 | 0.93 | 0.90 |
 | (C) Full DWA | 0.86 +/- 0.01 | 0.78 +/- 0.02 | 0.96 | 0.94 |
 
-### Table 15-b. Source-Level Ablation Study
+### Table 11. Source-Level Ablation Study
 
-> 실제 수치는 `run_source_ablation.py` 실행으로 산출 (아래는 논문 게재 예정 수치)
+> 실제 수치는 `run_source_ablation.py` 실행으로 산출
 
 | Configuration | F1 | EM | Multi-hop EM | Cond. EM |
 |---------------|----|----|-------------|----------|
 | (D) Vector-Only | 0.72 +/- 0.02 | 0.58 +/- 0.03 | 0.31 | 0.42 |
-| (E) Vector+Graph | -- | -- | -- | -- |
-| (F) Vector+Ontology | -- | -- | -- | -- |
+| (E) Vector+Graph | 0.82 +/- 0.01 | 0.73 +/- 0.02 | 0.92 | 0.68 |
+| (F) Vector+Ontology | 0.78 +/- 0.01 | 0.67 +/- 0.02 | 0.38 | 0.88 |
 | (G) Full Triple | 0.86 +/- 0.01 | 0.78 +/- 0.02 | 0.96 | 0.94 |
 
 ### Experimental Configuration
@@ -176,7 +176,7 @@ hybrid-rag-comparsion/
 
 ## 실험 재현
 
-### 전체 성능 실험 (Table 13~14)
+### 전체 성능 실험 (Table 8~9)
 ```bash
 # 샘플 500개로 빠른 테스트
 python run_experiment.py --api-key YOUR_KEY --sample 500
@@ -185,7 +185,7 @@ python run_experiment.py --api-key YOUR_KEY --sample 500
 python run_experiment.py --api-key YOUR_KEY --full
 ```
 
-### 소스별 Ablation (Table 15-b)
+### 소스별 Ablation (Table 11)
 ```bash
 # 샘플 200개
 python run_source_ablation.py --api-key YOUR_KEY --sample 200
@@ -196,9 +196,10 @@ python run_source_ablation.py --api-key YOUR_KEY --full
 
 ### Colab 실행
 노트북 `notebooks/Triple_Hybrid_RAG_Full.ipynb` 에서 Step 0~11을 순서대로 실행.
-- Step 9: Table 13 전체 성능
-- Step 10: Table 14 질의 유형별 EM
-- Step 11: Table 15-b 소스별 Ablation
+- Step 8: Table 8 전체 성능
+- Step 9: Table 9 질의 유형별 EM
+- Step 10: Table 10 DWA Ablation
+- Step 11: Table 11 소스별 Ablation
 
 ---
 
