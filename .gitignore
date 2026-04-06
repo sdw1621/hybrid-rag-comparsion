@@ -13,3 +13,6 @@ build/
 
 # Ignore nested repo used for comparison/demo
 hybrid-rag-comparsion/
+data/hotpot_dev_distractor_v1.json
+pdf_page_*.txt
+.claude/

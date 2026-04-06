@@ -1,0 +1,17 @@
+{
+  "dataset": "HotpotQA distractor dev",
+  "sample_size": 300,
+  "seed": 42,
+  "llm": "gpt-4o-mini",
+  "temperature": 0.0,
+  "vector_only": {
+    "F1": 0.2486,
+    "EM": 0.0733
+  },
+  "triple_hybrid": {
+    "F1": 0.3055,
+    "EM": 0.1433
+  },
+  "delta_f1_pct": 22.9,
+  "delta_em_pct": 95.5
+}
