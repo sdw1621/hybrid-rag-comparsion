@@ -40,18 +40,29 @@ class Evaluator:
         '와','과','도','만','까지','부터','에게','한테','께',
     ]
 
+    # [CORRIGENDUM 2026-04-22] Punctuation must be stripped before token-set F1.
+    # Without this, list-form gold like "홍성민, 황성민, 전성민" tokenizes as
+    # {"홍성민,", "황성민,", "전성민"} while sentence-form predictions produce
+    # {"홍성민", ...}: only the last (punctuation-free) gold token matches,
+    # collapsing F1 to ~1/3 of its true value. See CORRIGENDUM.md.
+    _PUNCT_RE = re.compile(r"""[,.:;!?"'“”‘’()\[\]\{\}·・…―—ㆍ]""")
+
     def normalize(self, text: str) -> str:
-        """EM 정규화 (논문 Section V.2)"""
+        """EM 정규화 (논문 Section V.2, post-2026-04-22 punctuation fix)"""
         # 1. Unicode NFC
         text = unicodedata.normalize('NFC', text)
         # 2. 소문자
         text = text.lower()
         # 3. 공백 통일
         text = re.sub(r'\s+', ' ', text).strip()
-        # 4. 한국어 조사 제거
+        # 4. [NEW] 구두점 제거 — tokenization 전에 적용하여 "A, B, C" 가
+        #    {"A", "B", "C"} 로 분리되도록 보정 (CORRIGENDUM 참고)
+        text = self._PUNCT_RE.sub(' ', text)
+        text = re.sub(r'\s+', ' ', text).strip()
+        # 5. 한국어 조사 제거
         for p in sorted(self.KO_PARTICLES, key=len, reverse=True):
             text = re.sub(rf'(?<=[가-힣]){p}(?=\s|$)', '', text)
-        # 5. 숫자 표현 통일 (한글 숫자 → 아라비아)
+        # 6. 숫자 표현 통일 (한글 숫자 → 아라비아)
         ko_nums = {'일':'1','이':'2','삼':'3','사':'4','오':'5',
                    '육':'6','칠':'7','팔':'8','구':'9','십':'10'}
         for k, v in ko_nums.items():

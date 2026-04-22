@@ -6,6 +6,11 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
 [![LangChain](https://img.shields.io/badge/LangChain-0.1.0+-green)](https://langchain.com)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-red)](https://streamlit.io)
+[![Corrigendum](https://img.shields.io/badge/CORRIGENDUM-2026--04--22-red)](CORRIGENDUM.md)
+
+> 🚨 **2026-04-22 정정 고지** — 원 논문 Table 8 의 수치(F1 0.86, EM 0.78 등)는 **본 저장소 코드로 재현되지 않습니다**. 구두점 처리 버그와 Table 8 노트북 셀의 미실행이 원인이며, 정정된 재측정치는 [**CORRIGENDUM.md**](CORRIGENDUM.md) 에 공개되어 있습니다. **본 저장소를 인용하는 연구자는 반드시 정정본 수치를 사용하십시오.**
+>
+> 후속 연구는 박사학위 논문 저장소 [**sdw1621/triple-rag-phd**](https://github.com/sdw1621/triple-rag-phd) 에서 확장된 형태로 진행 중이며, PPO 기반 L-DWA + 엄격 평가 인프라를 제공합니다.
 
 ---
 
@@ -118,7 +123,28 @@ hybrid-rag-comparsion/
 
 ## 실험 결과
 
+> ⚠️ **CORRIGENDUM (2026-04-22).** 아래 Table 8~11 의 원 논문 수치는 **박사학위 논문 준비 중 수행된 재현 실험에서 완전히 재현되지 않았습니다**. 근본 원인은 (i) `src/evaluator.py` 의 구두점 처리 버그와 (ii) Table 8 생성 노트북 셀의 실행 증거 부재입니다. 정정된 재측정치는 [CORRIGENDUM.md](CORRIGENDUM.md) 를 참조하십시오. 본 저장소를 인용하는 연구자는 반드시 정정본 수치를 사용하시기 바랍니다.
+
 ### Table 8. Overall Performance (mean +/- std, Gold QA 5,000 x 3 runs)
+
+> **정정 고지**: 아래는 **원 논문 게재본 수치**입니다. [CORRIGENDUM §2](CORRIGENDUM.md#2-reproduction-attempt-2026-04-22) 의 재측정치와 비교하여 사용하십시오.
+
+| System | F1 (원 논문) | F1 (정정 재측정) |
+|--------|---|---|
+| Vector-Only | 0.72 ± 0.02 | 0.082 (strict) / 0.334 (substring) |
+| **Triple-Hybrid (R-DWA)** | **0.86 ± 0.01** | **0.137 (strict) / 0.450 (substring)** |
+
+| System | EM (원 논문) | EM (재측정) |
+|---|---|---|
+| Vector-Only | 0.58 ± 0.03 | 0.000 (구조적 0, gold 리스트 형식) |
+| **Triple-Hybrid (R-DWA)** | **0.78 ± 0.02** | **0.000** |
+
+| System | Faithfulness (원 논문) | Faithfulness (재측정) |
+|---|---|---|
+| Vector-Only | 0.71 ± 0.03 | 0.742 ± 0.43 |
+| **Triple-Hybrid (R-DWA)** | **0.89 ± 0.01** | **0.835 ± 0.36** (94% 재현) |
+
+**원 논문의 Table 8 (참고용, 인용 금지):**
 
 | System | F1 | EM | Recall@3 | Precision | Faithfulness |
 |--------|----|----|----------|-----------|--------------|
